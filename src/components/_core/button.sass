@@ -1,0 +1,91 @@
+.swiper-pagination-bullet
+	width: 20px!important
+	height: 20px!important
+	background-color: transparent!important
+	border: 2px solid #ffffff
+	transition: .3s all  ease-in-out
+.swiper-pagination-bullet-active
+	background-color: $main!important
+	border: 2px solid $main
+.view-detail
+	width: 217px
+	height: 45px
+	border-radius: 30px
+	border: 1px solid #707070
+	background-color: #ffffff
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #000000
+	font-size: 20px
+	font-weight: 400
+	transition: .3s all  ease-in-out
+	margin-top: 20px
+	white-space: nowrap
+	&:hover
+		transform: translateY(-3px)
+		background-color: $main
+		border: 1px solid $main
+		color: white
+.wrap-button
+	.button-prev-1,.button-next-1
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 43px
+		height: 43px
+		border: 2px solid #ffffff
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		z-index: 999
+		outline: none
+		transition: .3s all  ease-in-out
+		&:hover
+			transform: translateY(-60%)
+			box-shadow: 2px 2px 3px #0000002e
+	.button-prev-1
+		left: 0
+	.button-next-1
+		right: 0
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	list-style: none
+	padding: 0
+	margin-bottom: 50px
+	li
+		&+li
+			margin-left: 1px
+		&.active
+			a
+				background-color: $main
+				color: white
+		a
+			width: 48px
+			height: 48px
+			background-color: #e2e2e2
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #000000
+			font-size: r(20px)
+			font-weight: 600
+			transition: .3s all  ease-in-out
+			&:hover
+				background-color: $main
+				color: white
+			&.NextPage
+				background-color: #908f8f
+				em
+					color: white
+			&.BackPage
+				background-color: #f2f2f2
+				em
+					color: white
+.wrap-slide
+	position: relative

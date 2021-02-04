@@ -1,0 +1,168 @@
+section.quan-he-co-dong(data-toggle="tabslet")
+    .filed-nav
+        ul.type-none.tabslet-tab
+            li.active
+                a(href="#bctc") Báo Cáo Tài Chính
+            li
+                a(href="#quan-he-cd") Quản Trị Doanh Nghiệp
+            li
+                a(href="#daiHoiCoDong") Đại Hội Cổ Đông
+            li
+                a(href="#baoCaoThuongNien") Báo Cáo Thường Niên
+            li
+                a(href="#thong-tin-lien-he") Thông Tin Liên Lạc
+    .wrap-report#bctc.tabslet-content.active
+        .container
+            h2.title-small.main BÁO CÁO TÀI CHÍNH
+            .row
+                .col-xl-4
+                    .wrap-select
+                        select.select-qh(name="loai")
+                            option(value="2020") 2020
+                            option(value="2021") 2021
+                            option(value="2022") 2022
+                            option(value="2023") 2023
+                        .icon-select
+                            .icon
+                .col-xl-8
+                    .row
+                        -for(i=0;i<10;i++)
+                            .col-xl-6
+                                .box-item
+                                    .wrap-left
+                                        .date
+                                            | 20
+                                            span 1 - 2020
+                                        .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                                    a(href="").pdf
+                                        img(src="./img/icon/pdf_down.png" alt="")
+    .wrap-report#daiHoiCoDong.tabslet-content
+        .container
+            h2.title-small.main Đại Hội ĐỒNG CỔ ĐÔNG
+            .row
+                .col-xl-4
+                    .wrap-select
+                        select.select-qh(name="loai")
+                            option(value="2020") 2020
+                            option(value="2021") 2021
+                            option(value="2022") 2022
+                            option(value="2023") 2023
+                        .icon-select
+                            .icon
+                .col-xl-8
+                    .row
+                        -for(i=0;i<10;i++)
+                            .col-xl-6
+                                .box-item
+                                    .wrap-left
+                                        .date
+                                            | 20
+                                            span 1 - 2020
+                                        .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                                    a(href="").pdf
+                                        img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")
+    .wrap-report#baoCaoThuongNien.tabslet-content
+        .container
+            h2.title-small.main BÁO CÁO
+            .wrap-main-select
+                .row
+                    .col-xl-4
+                        .wrap-select
+                            select.select-qh(name="loai")
+                                option(value="2020") 2020
+                                option(value="2021") 2021
+                                option(value="2022") 2022
+                                option(value="2023") 2023
+                            .icon-select
+                                .icon
+                    .col-xl-8
+                        .title-small-2 Báo cáo thường niên
+                        .row
+                            -for(i=0;i<1;i++)
+                                .col-xl-6
+                                    .box-item
+                                        .wrap-left
+                                            .date
+                                                | 20
+                                                span 1 - 2020
+                                            .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                                        a(href="").pdf
+                                            img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")
+            .wrap-main-select
+                .row
+                    .col-xl-4
+                        .wrap-select
+                            select.select-qh(name="loai")
+                                option(value="2020") 2020
+                                option(value="2021") 2021
+                                option(value="2022") 2022
+                                option(value="2023") 2023
+                            .icon-select
+                                .icon
+                    .col-xl-8
+                        .title-small-2 Báo cáo tài chính
+                        .row
+                            -for(i=0;i<10;i++)
+                                .col-xl-6
+                                    .box-item
+                                        .wrap-left
+                                            .date
+                                                | 20
+                                                span 1 - 2020
+                                            .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                                        a(href="").pdf
+                                            img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")
+    .quan-he-co-dong-2.wrap-report.tabslet-content(setBackground="./img/qhcd/qhcd.png")#thong-tin-lien-he
+        .container
+            h2.title-small.main BÁO CÁO TÀI CHÍNH
+            .main-box(setBackground="./img/qhcd/bg-main-qhcd2.png")
+                .title Trụ sở đăng ký của Công ty
+                p 143/7D Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, Tp. Hồ Chí Minh.
+                p Hotline (028) 37 325 534
+                p sdc-info@sdc.com.vn
+    .modal-quan-he-cd.tabslet-content#quan-he-cd
+        .wrap-main
+            .title-main QUản trị Doanh Nghiệp
+            .mota.border-b Tại SDC chúng tôi tin tưởng rằng một Hệ thống quản trị công ty vững mạnh là nền tảng để xây dựng một môi trường làm việc chính trực, minh bạch và công bằng, bảo đảm sự phát triển vững bền trong dài hạn của SDC, qua đó kiến tạo giá trị cho cộng đồng và cổ đông của Công ty.
+            .title-small.center Sơ đồ tổ chức
+            .mota SDC được tổ chức một cách chuyên nghiệp với sự phân bổ phòng ban chuyên nghiệp theo chức năng. Từng bộ phận được phân cấp với trách nhiệm và KPI rõ ràng, cụ thể. Sơ đồ tổ chức hiện tại giúp SDC vận hành trơn tru, gắn kết và hiệu quả.
+            .img
+                img(data-src="./img/mindmap.png" alt="" class="lazyload")
+            .line
+            .title-small Điều lệ
+            .mota Điều lệ của SDC là cơ sở pháp lý cho toàn bộ các hoạt động của Công ty, bao gồm các thông tin liên quan đến cơ cấu tổ chức, cách thức vận hành, quyền hạn, trách nhiệm của Đại hội đồng cổ đông, Hội đồng quản trị, bộ máy quản lý; quyền lợi nghĩa vụ của các cổ đông…
+            .wrap-pdf
+                .row
+                    .col-lg-6
+                        .box-item
+                            .wrap-left
+                                .date
+                                    | 20
+                                    span 1 - 2020
+                                .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                            a(href="").pdf
+                                img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")
+                    .col-lg-6
+                        .box-item
+                            .wrap-left
+                                .date
+                                    | 20
+                                    span 1 - 2020
+                                .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                            a(href="").pdf
+                                img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")
+            .line
+            .title-small Quy chế Quản trị nội bộ
+            .mota Điều lệ của SDC là cơ sở pháp lý cho toàn bộ các hoạt động của Công ty, bao gồm các thông tin liên quan đến cơ cấu tổ chức, cách thức vận hành, quyền hạn, trách nhiệm của Đại hội đồng cổ đông, Hội đồng quản trị, bộ máy quản lý; quyền lợi nghĩa vụ của các cổ đông…
+            .wrap-pdf
+                .row
+                    -for(i=0;i<3;i++)
+                        .col-lg-6
+                            .box-item
+                                .wrap-left
+                                    .date
+                                        | 20
+                                        span 1 - 2020
+                                    .text Nghị quyết đại hội đồng cổ đông thường niên 2020 - SDC
+                                a(href="").pdf
+                                    img(data-src="./img/icon/pdf_down.png" alt="" class="lazyload")

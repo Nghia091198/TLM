@@ -1,0 +1,390 @@
+.block-product-news
+    overflow: hidden
+    .gallery-product-detail-slide
+        position: relative
+        .wrap-text-left
+            .wrap-slide-product
+                position: absolute
+                top: 200px
+                left: 50%
+                transform: translateX(-50%)
+                @media screen and ( max-width: 1200px )
+                    top: 10%
+                .wrap-text-main
+                    padding-right: 120px
+                    @media screen and ( max-width: 1200px )
+                        padding-right: 0
+                        margin-bottom: 50px
+                .wrap-button
+                    @media screen and ( max-width: 1600px )
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        margin-top: 20px
+                        position: static
+                        .button-prev-1,.button-next-1
+                            position: static
+                            transform: translateY(0)
+                    .button-prev-1
+                        left: auto
+                        right: 100%
+                        margin-right: 36px
+                        @media screen and ( max-width: 1600px )
+                            margin-right: 10px
+                    .button-next-1
+                        right: auto
+                        left: 100%
+                        margin-left: 36px
+                        @media screen and ( max-width: 1600px )
+                            margin-left: 10px
+            .title-main
+                color: #ffffff
+                font-size: r(42px)
+                font-weight: 700
+                letter-spacing: 0.84px
+                line-height: 1.2
+                margin-bottom: 20px
+                text-transform: uppercase
+            .mota
+                color: #ffffff
+                font-size: r(20px)
+                font-weight: 400
+            .product-slide-m
+                .title-sp
+                    width: 100%
+                    height: 84px
+                    background-color: rgba(255, 255, 255, 0.25)
+                    border-radius: 0 18px 0px 18px
+                    overflow: hidden
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    padding: 0 5px
+                    text-align: center
+                    transition: .3s all  ease-in-out
+                    backdrop-filter: blur(25px)
+                    a
+                        color: #ffffff
+                        font-size: r(20px)
+                        font-weight: 400
+                        line-height: 1
+                        transition: .3s all  ease-in-out
+                    strong
+                        color: #ffffff
+                        font-size: r(35px)
+                        font-weight: 700
+                        line-height: 1
+                        text-transform: uppercase
+                        transition: .3s all  ease-in-out
+                .wrap-product-main
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-direction: column
+                    &:hover
+                        .title-sp
+                            background-color: rgba(255, 255, 255, 0.6)
+                            a,strong
+                                color: $main
+
+                    .img
+                        width: 100%
+                        margin-bottom: 30px
+                        img
+                            width: 100%
+                            height: 100%
+        .gallery-top-product
+            position: relative
+            .swiper-slide
+                position: relative
+                .img-top
+                    max-width: 100%
+                    max-height: 100%
+                    width: 100%
+                    height: 1080px
+                    position: relative
+                    @media screen and ( max-width: 1200px )
+                        height: 169vh
+                    @media screen and ( max-width: 992px )
+                        height: 180vh
+                    @media screen and ( max-width: 765px )
+                        height: 155vh
+                    @media screen and ( max-width: 375px )
+                        height: 190vh
+                    &::before
+                        width: 100%
+                        height: 100%
+                        position: absolute
+                        content: ''
+                        background: linear-gradient(180deg,rgba(0,0,0,.01),#333333)
+                        pointer-events: none
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                .head-title
+                    position: absolute
+                    bottom: 30%
+                    left: 8%
+                    max-width: 100%
+                    max-width: 480px
+                    @media screen and ( max-width: 1280px )
+                        bottom: 45%
+                        left: 4%
+                    @media screen and ( max-width: 1024.98px )
+                        bottom: 50%
+                        left: 75px
+                    @media screen and ( max-width: 768px)
+                        width: auto
+                        left: 40%
+                        bottom: 205px
+                        transform: translate(-50%, -50%)
+                    @media screen and ( max-width: 576px )
+                        bottom: 135px
+                    .title
+                        color: #ffffff
+                        font-size: 3.625rem
+                        font-weight: 700
+                        font-style: normal
+                        letter-spacing: normal
+                        text-align: left
+                        padding-right: 120px
+                        text-transform: uppercase
+                        @media screen and ( max-width: 1024px )
+                            padding-right: 0
+                        @media screen and ( max-width: 576px )
+                            padding-right: 0
+                    .caption
+                        color: #ffffff
+                        font-size: 1.25rem
+                        font-weight: 400
+                        font-style: normal
+                        letter-spacing: normal
+                        text-align: left
+                        padding-top: 20px
+                        padding-right: 120px
+                    .btn-view-more
+                        margin-top: 20px
+                        a
+                            color: #ffffff
+                            font-size: 1.25rem
+                            font-weight: 400
+                            font-style: normal
+                            letter-spacing: normal
+                            text-align: left
+                            img
+                                border: 1px solid #ffffff
+                                border-radius: 50%
+                                padding: 7px
+                                width: 30px
+                                height: 30px
+                                margin-left: 8px
+
+                .swiper-item-product-news-slide
+                    position: absolute
+                    bottom: 25%
+                    right: 10%
+                    .swiper-slide
+                        height: auto
+                        .card_img
+                            a
+                                img
+                                    width: 100%
+                        .content
+                            border: 1px solid $main
+                            border-radius: 0 40px
+                            padding: 10px
+                            margin-top: 30px
+                            text-align: center
+                            background-color: rgba(#ffffff, .3)
+                            .title
+                                a
+                                    color: #fff
+                                    font-size: 20px
+                                    font-weight: 400
+                                    font-style: normal
+                                    letter-spacing: normal
+                            .desc
+                                color: #fff
+                                font-size: 35px
+                                font-weight: 700
+                                font-style: normal
+                                letter-spacing: normal
+                .swiper-nav
+                    position: absolute
+                    bottom: 50%
+                    .nav-arrow-prev,.nav-arrow-next
+                        position: absolute
+                        width: 40px
+                        height: 40px
+                        top: 50%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        transition: .3s all  ease-in-out
+                        img
+                            border: 1px solid #ffffff
+                            border-radius: 50%
+                            padding: 7px
+                            width: 30px
+                            height: 30px
+                            margin-left: 8px
+                    .nav-arrow-next
+                        right: -890px
+                        cursor: pointer
+                        @media screen and ( max-width: 1350px)
+                            right: -15px
+                            top: 50%
+                        @media screen and ( max-width: 1024.98px )
+                            right: -15px
+                            top: 50%
+                        @media screen and ( max-width: 767px)
+                            right: -15px
+                            top: 50%
+                        @media screen and ( max-width: 576px)
+                            right: -15px
+                            top: 50%
+
+                    .nav-arrow-prev
+                        left: -65px
+                        cursor: pointer
+                        @media screen and ( max-width: 1350px)
+                            left: -15px
+                            top: 50%
+                        @media screen and ( max-width: 1024.98px )
+                            left: -15px
+                            top: 50%
+                        @media screen and ( max-width: 767px)
+                            left: -15px
+                            top: 50%
+                        @media screen and ( max-width: 576px)
+                            left: -15px
+                            top: 50%
+                    .swiper-container
+                        margin: 0
+                        @media screen and ( max-width: 1350px)
+                            margin: 0 30px
+    // End nút slid
+.block-product-news-2
+    overflow: hidden
+    padding-top: 30%
+    @media screen and ( max-width:1280px  )
+        padding-top: 10%
+    .wrap-container
+        padding-left: 14%
+        width: 100%
+        @media screen and (min-width : 1440px) and ( max-height: 768px )
+            padding-left: 5%
+        @media screen and ( max-width: 1600px )
+            padding-left: 8%
+        @media screen and ( max-width: 1330px )
+            padding-left: 3%
+
+    .row
+        height: 100%
+    .section-title
+        &::before
+            height: 5px
+    .box-wrap
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        .mota
+            text-align: left
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+            color: #ffffff
+            font-family: "Open Sans"
+            font-size: r(20px)
+            font-weight: 700
+            text-align: left
+            @media screen and ( max-width: 1280px )
+                max-width: 700px
+            @media screen and (min-width : 1400px) and ( max-height: 768px )
+                +rgtext(5)
+            @media screen and ( max-width: 768px )
+                padding-right: 20px
+        &.box-text-left
+            padding-bottom: 110px
+            @media screen and ( max-width: 1280px )
+                margin-top: 40px
+                padding-bottom: 60px
+
+        &.box-slide
+            padding-left: 42px
+            @media screen and ( max-width: 1280px )
+                padding-left: 0
+        .swiper-container
+            width: 100%!important
+            .box-img
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+                border-radius: 8px
+                height: 398px
+                overflow: hidden
+                position: relative
+                @media screen and ( max-width: 992px )
+                    height: auto
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                .title
+                    position: absolute
+                    bottom: 15px
+                    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+                    color: #ffffff
+                    font-size: 20px
+                    font-weight: 700
+                    line-height: 26px
+                    text-align: center
+                    left: 23px
+                    &::before
+                        content: ''
+                        width: 41px
+                        height: 3px
+                        background-color: #fff
+                        position: absolute
+                        top: -8px
+                        left: 0
+        .wrap-count-slide
+            margin-top: 0px
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            .wrap-button
+                display: flex
+                align-items: center
+                .button-next, .button-prev
+                    width: 43px
+                    height: 43px
+                    border: 2px solid #ffffff
+                    border-radius: 50%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    transition: .3s all  ease-in-out
+                    img
+                        transition: .3s all  ease-in-out
+                    &:hover
+                        background-color: white
+                        img
+                            filter: brightness(0)
+                .button-next
+                    margin-left: 20px
+            .line
+                width: 697px
+                height: 3px
+                background-color: #fff
+                border-radius: 40px
+                overflow: hidden
+                margin-left: 30px
+                margin-right: 20px
+            .count
+                text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16)
+                color: #ffffff
+                font-size: r(58px)
+                font-weight: 700
+                width: auto!important
+                @media screen and ( max-width: 1200px )
+                    padding-right: 20px

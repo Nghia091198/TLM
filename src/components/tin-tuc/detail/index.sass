@@ -1,0 +1,92 @@
+.post-detail
+    .col-lg-10, .col-lg-11
+        margin: 0 auto
+    .wrap-header
+        display: flex
+        // padding-left: 90px
+        margin-bottom: 79px
+        @media screen and ( max-width: 992px )
+            padding-left: 0px
+        @media screen and ( max-width: 575px )
+            flex-wrap: wrap
+        @media screen and ( max-width: 992px )
+            margin-bottom: 30px
+        .date
+            height: 124px
+            flex: 0 0 127px
+            background-color: $main
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            color: #ffffff
+            font-weight: 400
+            letter-spacing: 0.36px
+            font-size: 48px
+            line-height: 1.2
+            @media screen and ( max-width: 575px )
+                flex: 0 0 100%
+                height: 80px
+                line-height: 1
+            span
+                font-size: 18px
+        .text
+            padding-left: 17px
+            @media screen and ( max-width: 575px )
+                padding-left: 0
+                margin-top: 20px
+            .cate
+                color: $main
+                font-size: r(20px)
+                font-weight: 700
+            .title
+                color: #1a1a1a
+                font-size: 1.8rem
+                font-weight: 700
+                line-height: 1.2
+                text-transform: uppercase
+                +rgtext(2)
+                @media screen and ( max-width: 1280px )
+                    font-size: r(30px)
+                @media screen and ( max-width: 768px )
+                    font-size: r(25px)
+                    +rgtext(3)
+    .wrap-content
+        width: 100%
+        padding: 57px 90px 77px 90px
+        background-color: #ffffff
+        @media screen and ( max-width: 992px )
+            padding: 57px 30px 77px 30px
+        p
+            color: #1a1a1a
+            font-family: "Playfair Display"
+            font-size: r(20px)
+            font-weight: 400
+            line-height: 35px
+            &+p
+                margin-top: r(35px)
+        .tac-gia
+            text-align: right
+            color: #000000
+            font-size: r(20px)
+            font-style: italic
+            text-decoration: underline
+            margin-top: 12px
+    .wrap-post-related
+        margin-top: r(120px)
+        @media screen and ( max-width: 768px )
+            margin-top: r(60px)
+        .wrap-post-list-sm
+            margin-bottom: 30px
+            @media screen and ( max-width: 575px )
+                flex-wrap: wrap
+        .xem-them
+            color: #000000
+            font-family: Lato
+            font-size: r(24px)
+            font-weight: 500
+            letter-spacing: 0.24px
+            text-align: left
+            text-decoration: underline
+            margin-top: -10px
+            display: block

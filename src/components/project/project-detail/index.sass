@@ -1,0 +1,128 @@
+.project-detail
+    padding: 50px 0
+    .text
+        font-size: 1.25rem
+    .left-project-detail
+        .title-left
+            text-transform: uppercase
+            color: #5a5a5a
+            font-size: 1.2rem
+            font-weight: 700
+            font-style: normal
+            letter-spacing: normal
+            border-bottom: 3px solid $main
+            padding-bottom: 20px
+        .content
+            ul
+                list-style: none
+                padding: 0
+                li
+                    border-bottom: 1px solid $main
+                    padding: 20px 0
+                    &.active
+                        a
+                            color: $main
+                    &:last-child
+                        border-bottom: 0
+                    a
+                        color: #5a5a5a
+                        font-size: 1.2rem
+                        font-weight: 700
+                        font-style: normal
+                        letter-spacing: normal
+                        text-align: left
+                        text-transform: uppercase
+
+    .right-project-detail
+
+        .title-right
+            color: $main
+            font-size: r(42px)
+            font-weight: 700
+            font-style: normal
+            letter-spacing: 0.84px
+            text-transform: uppercase
+            padding-bottom: 20px
+            @media screen and ( max-width: 576px )
+                padding-top: 30px
+        // Slide gallery
+        .project-detail-slide
+            .gallery-top-project
+                position: relative
+                .swiper-slide
+                    width: 100%
+                    height: 100%
+                    img
+                        width: 100%
+                        height: 590px
+                        @media screen and ( max-width: 1024px )
+                            height: 40vh!important
+                .nav-prev,.nav-next
+                    position: absolute
+                    top: 45%
+                    display: flex
+                    z-index: 5
+                    em
+                        cursor: pointer
+                        color: #707070
+                        font-size: r(30px)
+                        color: #999999
+            .gallery-thumbs-project
+                padding-top: 35px
+                @media screen and ( max-width: 375px )
+                    padding-top: 15px
+                .swiper-slide
+                    overflow: hidden
+                    cursor: pointer
+                    &.swiper-slide-thumb-active
+                        img
+                            border: 2px solid $main
+                    img
+                        width: 100%
+                        height: 90px
+                        object-fit: cover
+                        border: 2px solid transparent
+                        transition: .3s all  ease-in-out
+                // .swiper-slide-thumb-active
+                //     border: 1px solid #347227
+        // End nút slide
+    .right-fullcontent
+        display: flex
+        justify-content: space-between
+        border-top: 1px solid $main
+        border-bottom: 1px solid $main
+        padding: 25px 0
+        margin-top: 30px
+        margin-bottom: 30px
+        @media screen and ( max-width: 576px )
+            display: block
+        .desc
+            &:first-child
+                .caption
+                    border-left: 0
+                    padding-left: 0
+                    padding-right: 85px
+            .caption
+                list-style: none
+                padding: 0
+                border-left: 1px solid $main
+                padding-left: 85px
+                @media screen and ( max-width: 576px )
+                    padding-left: 0
+                    border-left: 0
+                li
+                    padding-bottom: 30px
+                    p
+                        color: #000000
+                        font-size: r(20px)
+                        font-weight: 800
+                        font-style: normal
+                        letter-spacing: normal
+                        text-align: left
+                        span
+                            color: #333333
+                            font-weight: 400
+                            padding-left: 5px
+    .text
+        p
+            padding-bottom: 30px

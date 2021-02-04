@@ -1,0 +1,49 @@
+section.lab-main-1(setBackground="./img/lab/layer-cat-lab-1.png")
+    .container
+        .section-title.text-left.black.no-line LAB SDC
+        .img
+            img(data-src="./img/lab/1-lab.png" alt="" class="lazyload")
+        .wrap-text-1
+            .row
+                .col-lg-5
+                    .wrap-text-left
+                        strong Tổng Sản lượng xuất khẩu hàng năm
+                        p lên đến 12 triệu tấn cho cá thị trườn châu âu
+                .col-lg-7
+                    .wrap-text-right
+                        p Phòng Lab hay Laboratory là phòng thí nghiệm – cơ sở hạ tầng được xây dựng và thiết kế để cung ứng những điều kiện cần thiết cho việc triển khai thực hiện các thí nghiệm (thực nghiệm) thuộc nhiều lĩnh vực như sinh, hóa, vật lý,…nhằm phục vụ cho mục đích nghiên cứu khoa học, đảm bảo tính an toàn cho người làm thí nghiệm.
+                        p Phòng lab có thể là một căn phòng nhỏ trong tổng thể tòa nhà hoặc một công trình được xây dựng riêng chỉ để sử dụng cho việc tiến hành các thí nghiệm, các đề án nghiên cứu, thực nghiệm.
+section.lab-main-2(setBackground="./img/lab-2.png")
+    .wrap-main-2
+        .box-blur-main
+            .wrap-text
+                .title-main-line HÌNH ẢNH HOẠT ĐỘNG Ở NHÀ MÁY
+                .mota Phòng lab có thể là một căn phòng nhỏ trong tổng thể tòa nhà hoặc một công trình được xây dựng riêng chỉ để sử dụng cho việc tiến hành các thí nghiệm, các đề án nghiên cứu, thực nghiệm.
+        .wrap-slide
+            .swiper-container
+                .swiper-wrapper
+                    -for(i=0;i<5;i++)
+                        .swiper-slide
+                            .img
+                                img(data-src="./img/lab/lab-img-1.png" alt="" class="lazyload")
+                .swiper-pagination
+section.lab-main-3(setBackground="./img/lab/bg-lab-3.png")
+    .container
+        .title-main-line GALLERY
+        .row
+            .col-xl-10
+                .wrap-gallery
+                    .box-white
+                    .wrap-slide
+                        .swiper-container.gallery-top
+                            .swiper-wrapper
+                                -for(i=0;i<5;i++)
+                                    .swiper-slide
+                                        .img
+                                            img(data-src="./img/lab/lab-img-3.png" alt="" class="lazyload")
+                        .swiper-container.gallery-thumbs
+                            .swiper-wrapper
+                                -for(i=0;i<5;i++)
+                                    .swiper-slide
+                                        .img
+                                            img(data-src="./img/lab/lab-img-3.png" alt="" class="lazyload")

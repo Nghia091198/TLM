@@ -1,0 +1,88 @@
+.news-detail-page
+    .banner-project-detail
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            bottom: -76px
+            left: 50%
+            transform: translateX(-50%)
+            background-color: #e98727
+            width: 5px
+            z-index: 2
+            height: 152px
+            @media screen and ( max-width: 575px )
+                height: 110px
+                bottom: -55px
+    .product-detail
+        background-color: #fff
+        .container
+            padding: 0 15px
+            background-color: #fff
+.product-detail
+    padding: 120px 0
+    background-color: #eeeeee
+    @media screen and ( max-width: 575px )
+        padding: 90px 0px
+    .container
+        background-color: #fff
+        max-width: 1170px
+        margin: 0 auto
+        padding: 60px 112px
+        p
+            margin-top: 15px
+        table
+            margin-top: 15px
+            width: 100%
+            tr
+                td
+                    border: 1px solid #e0e0e0
+                    color: #000000
+                    font-family: "Times New Roman"
+                    font-size: r(19px)
+                    font-weight: 400
+                    padding: 0 10px
+                &:first-child
+                    td
+                        text-align: center
+                        color: #000000
+                        font-family: "Times New Roman"
+                        font-size: r(21px)
+                        font-weight: 700
+            p
+                margin-top: 0px
+    .content-pro-detail
+        .title-pro-detail
+            color: $main
+            font-family: "Open Sans"
+            font-size: 1rem
+            font-weight: 700
+            font-style: normal
+            letter-spacing: normal
+            padding-top: 20px
+        .caption-pro-detail
+            color: #000000
+            font-family: "Open Sans"
+            font-size: 1rem
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+            padding-top: 20px
+
+    .card_img
+        padding-top: 20px
+
+    .big-content-detail
+        padding-top: 20px
+        .img
+            img
+                width: 100%
+                padding-top: 20px
+        p
+            color: #000000
+            font-family: "Open Sans"
+            font-size: 20px
+            font-weight: 400
+            font-style: normal
+            letter-spacing: normal
+            padding-top: 20px

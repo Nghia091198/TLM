@@ -1,0 +1,20 @@
+extends _layout.pug
+
+block var
+	- var title = 'Trang chu'
+	- var bodyClass = 'homepage'
+
+block main
+	#fake-header-open
+		.img
+			img(src="./img/Asset 3.png" alt="")
+		//- .open-button
+		//- 	span Menu
+	.full-page
+		include ../components/home/h-1/index.pug
+		include ../components/home/h-2/index.pug
+		include ../components/home/h-3/index.pug
+		include ../components/home/h-4/index.pug
+		include ../components/home/h-5/index.pug
+		include ../components/home/h-6/index.pug
+		include ../components/home/h-7/index.pug
