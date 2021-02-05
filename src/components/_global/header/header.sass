@@ -1,363 +1,142 @@
 header
-	background-color: rgba(white,0.9)
-	color: #ffffff
 	position: fixed
-	z-index: 9999
-	width: 100%
-	left: 0
-	right: 0
 	top: 0
-	box-shadow: 0 2px 7px #0000001c
-	height: 82px
-	margin-left: auto
-	margin-right: auto
-	display: flex
-	justify-content: space-between
-	align-items: center
-	padding: 0 50px
-	transition: all 1s cubic-bezier(.22,.44,0,1)
-	@media screen and ( max-width: 575px )
-		padding: 0px 20px
+	left: 0
+	width: 100%
+	z-index: 99
 	&.active
-		transform: translateY(-100%)
-		transition: all 1s cubic-bezier(.22,.44,0,1)
-	.wrap-right
+		transform: translateY(-100%);
+		transition: all 1s cubic-bezier(.22,.44,0,1);
+.header-top
+	background-image: linear-gradient(89deg, #f2f3f3 0%, #fbfcfc 100%)
+	height: 35px
+	display: flex
+	align-items: center
+	width: 100%
+.header-top-primary
+	display: flex
+	align-items: center
+	.wrap-left
 		display: flex
 		align-items: center
-		.icon-search
-			cursor: pointer
-			em
-				font-size: 52px
-				color: $main
-				@media screen and ( max-width: 575px )
-					font-size: 30px
-		.change-lang
-			margin: 0 25px
-			color: $main
-			font-family: "Lato"
-			font-size: r(38px)
+		em
+			font-weight: 500
+			padding-right: 10px
+		*
+			+text-gradient
 			font-weight: 700
-			font-style: normal
-			letter-spacing: 0.76px
-			cursor: pointer
-			text-transform: uppercase
-			padding-bottom: 5px
-			margin-right: 14px
+	.wrap-search
+		margin-left: auto
+		.searchbox
 			position: relative
-			.list-change
+			&::before
+				content: ""
 				position: absolute
-				width: 150px
-				display: flex
-				align-items: center
-				justify-content: space-between
-				top: 70px
-				left: 500%
-				transform: translateX(-50%)
-				transition: .3s all  ease-in-out
-				opacity: 0
-				visibility: hidden
-				@media screen and ( max-width: 765px )
-					top: 68px
-				@media screen and ( max-width: 575px )
-					top: 58px
-				&.active
-					left: 50%
+				bottom: 0
+				width: 100%
+				height: 1px
+				background: $bg-gradient
+			input
+				border: unset
+				font-size: 12px
+				padding: 5px
+				background: $tran
+			button
+				+inner-transy
+				right: 0
+				border: unset
+				background-color: $tran
+				&::before
+					+icon("\f0d1")
+					+text-gradient 
+					right: 0
+	.wrap-language
+		position: relative
+		cursor: pointer
+		margin-left: r(25px)
+		padding-right: 15px
+		color: $color-99
+		font-size: 14px
+		text-transform: uppercase
+		&::before
+			+icon("\ea4d")
+			+text-gradient
+			content: 
+			right: 0
+		.dropdown
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			transform: translateY(30%)
+			transition: .3s all
+			padding: r(5px)
+			background-color: $main-2
+			color: $white
+		&:hover
+			color: $main-2
+			.dropdown
+				opacity: 1
+				visibility: visible
+				transform: translateY(0)
+				a
+					&:hover
+						color: $white
+.header-bottom
+	// box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+	height: 85px
+	display: flex
+	align-items: center
+	background: $white
+.primary-menu
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	.logo
+		margin: 0 r(130px)
+		.img
+			display: flex
+			width: 145px
+			height: 66px
+	ul
+		list-style: none
+		padding: 0
+		display: flex
+		justify-content: space-between
+		width: 100%
+		li
+			font-weight: 700
+			text-transform: uppercase
+			position: relative
+			&.active
+				&::before
+					content: ""
+					position: absolute
+					bottom: 1px
+					height: 2px
+					left: 0
+					width: 100%
+					background: $bg-gradient
+				a, em
+					+text-gradient
+					text-decoration: underline
+			&:hover
+				.dropdown
 					opacity: 1
 					visibility: visible
-					transition: .3s all  ease-in-out
-				a
-					display: flex
-					flex: 0 0 50%
-					background-color: rgba(#fff, .9)
-					font-size: 1.2rem
-					text-align: center
-					justify-content: center
-					padding: 10px 0px
-					+hover-underline(95%,$main)
-			@media screen and ( max-width: 575px )
-				margin-right: 0px
-				margin-left: 5px
-				font-size: r(25px)
-
-	.hambuger
-		height: 25px
-		align-items: center
-		justify-content: center
-		width: 46px
-		position: relative
-		transition: .3s all  ease-in-out
-		margin-bottom: 4px
-		cursor: pointer
-		margin-left: 15px
-		@media screen and ( max-width: 1300px )
-			display: flex
-		@media screen and ( max-width: 575px )
-			width: 34px
-		&.active
-			span
-				&:first-child
-					top: 18px
-					left: 50%
-					width: 0px
-				&:nth-child(2)
-					transform: rotate(45deg)
-					background: $main
-				&:nth-child(3)
-					transform: rotate(-45deg)
-					background: $main
-				&:nth-child(4)
-					top: 18px
-					left: 50%
-					width: 0px
-		span
-			display: block
-			position: absolute
-			left: 0
-			transform: rotate(0deg)
-			opacity: 1
-			transition: .5s ease-in-out
-			background: $main
-			width: 100%
-			height: 4px
-			&:first-child
-				top: 0
-			&:nth-child(2), &:nth-child(3)
-				top: 10px
-			&:nth-child(4)
+			.dropdown
+				position: absolute
 				top: 20px
-.search-wrap
-	transition: all 1s ease
-	background: rgba(0, 0, 0, 0.63)
-	position: fixed
-	left: 0
-	top: 0
-	width: 100%
-	height: 100%
-	display: table
-	z-index: 99999
-	opacity: 0
-	visibility: hidden
-	transition: .3s all cubic-bezier(0, 0.55, 0.45, 1)
-	&.active
-		transition: .2s all cubic-bezier(0, 0.55, 0.45, 1)
-		opacity: 1
-		visibility: visible
-		.wrap-button
-			transform: translateY(0)
-	.search-middle
-		display: table-cell
-		vertical-align: middle
-		z-index: 99999
-		height: 100%
-	.search-t
-		background: transparent
-		color: #fff
-		font-size: 25 / 16 * 1rem
-		border-radius: 0
-		width: 100%
-		margin: 0 auto
-		background-color: transparent
-		border: 0
-		color: white
-		padding: 0
-		transition: ease-in-out all .3s
-		&:focus
-			background-color: transparent
-			border: 0
-			color: white
-			box-shadow: none
-		&::placeholder
-			color: white
-		@media screen and ( max-width: 575px )
-			font-size: 20px
-	.close-btn
-		position: absolute
-		top: 10px
-		right: 20px
-		display: flex
-		align-items: center
-		justify-content: center
-		font-size: 25px
-		font-weight: 500
-		background-color: $main
-		padding: 10px
-		width: 50px
-		height: 50px
-		border-radius: 50%
-		cursor: pointer
-		color: white
-
-	.wrap-button
-		width: 60%
-		margin: 0 auto
-		position: relative
-		border: 2px solid white
-		height: 60px
-		display: flex
-		align-items: center
-		padding: 0 24px
-		transform: translateY(30px)
-		border-radius: 40px
-		transition: .3s all  ease-in-out
-		@media screen and ( max-width: 575px )
-			width: 80%
-		.button-search
-			position: absolute
-			right: 2px
-			top: 50%
-			transform: translateY(-50%)
-			width: 50px
-			height: 50px
-			border-radius: 50%
-			display: flex
-			align-items: center
-			justify-content: center
-			border: 0
-			outline: 0
-			i
-				font-size: 30px
-.menu-fullscreen
-	position: fixed
-	left: 0
-	bottom: -100%
-	z-index: 999999
-	width: 100%
-	height: 100vh
-	background-color: $main
-	display: flex
-	transition: .5s all  ease-in-out
-	.Module-163
-		height: 100%
-		[class*="Module"]
-			height: 100%
-	&.active
-		bottom: 0
-		ul
-			li
-				transition: all 0.5s
-				animation-duration: 0.5s
-				animation-fill-mode: both
-				animation-name: moveInLeft
-				&:nth-child(1)
-					animation-delay: .2s
-				&:nth-child(2)
-					animation-delay: .3s
-				&:nth-child(3)
-					animation-delay: .4s
-				&:nth-child(4)
-					animation-delay: .5s
-				&:nth-child(5)
-					animation-delay: .6s
-				&:nth-child(6)
-					animation-delay: .7s
-				&:nth-child(7)
-					animation-delay: .8s
-				&:nth-child(8)
-					animation-delay: .9s
-	.wrap-main
-		max-width: 1612px
-		width: 100%
-		height: 100%
-		margin-left: 90px
-		border-left: 1px solid white
-		border-right: 1px solid white
-		position: relative
-		@media screen and ( max-width: 1100px )
-			margin-left: 0
-			border-left: 0
-			border-right: 0
-			max-width: 100%
-		.logo
-			padding-top: 54px
-			padding-left: 26px
-			@media screen and ( max-width: 1100px )
-				padding-left: 20px
-				padding-top: 20px
-				padding-bottom: 20px
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+				opacity: 0
+				visibility: hidden
+				// transform: translateY(30%)
+				transition: .3s all
 				a
-					width: 150px
-					height: auto
-					display: block
-					img
-						width: 100%
-						height: 100%
-		.menu-overlay
-			opacity: 0.18
-			color: #ffffff
-			font-family: "Open Sans"
-			font-size: 280px
-			font-weight: 600
-			letter-spacing: 5.6px
-			line-height: 110px
-			position: absolute
-			left: 10px
-			bottom: 8%
-			@media screen and ( max-width: 575px )
-				bottom: 0%
-				font-size: 115px
-	.list-menu
-		text-align: right
-		padding-right: 88px
-		height: 75%
-		display: flex
-		flex-direction: column
-		justify-content: space-between
-		@media screen and ( max-width: 1100px )
-			align-items: center
-			padding-right: 0px
-			justify-content: space-evenly
-		@media screen and ( max-width: 765px )
-			height: 65%
-		li
-			&.active
-				a
-					// border-bottom: 3px solid #927f70
-					color: #927f70
-					padding-bottom: 5px
-		a
-			color: #ffffff
-			font-size: r(42px)
-			font-weight: 700
-			text-transform: uppercase
-			border-bottom: 3px solid transparent
-			padding-bottom: 5px
-			transition: .3s all  ease-in-out
-			&:hover
-				color: #927f70
-			@media screen and ( max-width: 768px )
-				font-size: r(35px)
-	.icon-close
-		width: 79px
-		height: 79px
-		border: 3px solid #ffffff
-		border-radius: 50%
-		display: flex
-		align-items: center
-		justify-content: center
-		position: absolute
-		right: 88px
-		top: 39px
-		cursor: pointer
-		@media screen and ( max-width: 1100px )
-			top: 30px
-			right: 20px
-			width: 55px
-			height: 55px
-			img
-				width: 20px
-	.small-menu
-		writing-mode: vertical-lr
-		color: #ffffff
-		font-size: 20px
-		font-weight: 700
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%) rotate(180deg)
-	.wrap-right
-		position: relative
-		flex: 0 0 220px
-		@media screen and ( max-width: 1100px )
-			display: none
-
+					width: max-content
+					padding: r(20px)
+				
 

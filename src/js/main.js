@@ -748,7 +748,28 @@ function category() {
 		});
 	}
 }
-
+function scrollToDiv() {
+    $(".wrap-scroll").on("click", function(event) {
+		fullpage_api.moveSectionDown();
+		// if ($("section").hasClass("current-page")){
+		// 	var a = $("section.current-page")
+		// 	a.removeClass("current-page");
+		// 	a.addClass("down-scroll");
+		// 	a.next("section").addClass("current-page");
+		// 	$("header").addClass("active");
+		// 	$("#nav-pagination").addClass("active");
+		// 	$("#nav-pagination ul li").removeClass("active");
+		// 	$(
+		// 		"#nav-pagination ul li:nth-child(" + (currentSlideNumber + 2) + ")"
+		// 	).addClass("active");
+		// 	if($("section").hasClass("up-scroll down-scroll")){
+		// 		console.log("a");
+		// 		$("section.up-scroll.down-scroll").removeClass("up-scroll");
+		// 	}
+		// } else {
+		// }
+    });
+}
 function crollToDiv() {
 	$(".zone-nav .categroly ul li .nav-link").on("click", function (event) {
 		$(this).parents("li").addClass("active");
@@ -1212,4 +1233,5 @@ $(document).ready(function () {
 	moveDetail();
 	wrapTable();
 	clickFullImage();
+	scrollToDiv();
 });
