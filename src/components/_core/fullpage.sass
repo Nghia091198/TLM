@@ -505,12 +505,12 @@
 			transform: translate(-50%, -50%)
 		&::before
 			content: ''
-			height: 1px
-			width: 60px
-			right: calc(100% + 5px)
-			top: 50%
+			height: 60px
+			width: 1px
+			left: 50%
+			top: 0
 			position: absolute
-			transform: translateY(-50%)  rotate(0)
+			transform: translateX(-50%)  rotate(0)
 			border-top: 1px solid $main
 	@media screen and ( max-width: 1199.98px)
 		display: none
@@ -535,3 +535,29 @@
 // 			a
 // 				font-size: 16px
 // 1600/ 1440 - 768 / 1440 -657 / 1400 - 567 / 1366 - (768 - 675)
+
+.menu-fullscreen
+	height: 100%
+	position: fixed
+	z-index: 9
+	background: $white
+	width: 100%
+	top: 0
+	display: flex
+	.primary-menu
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		padding: r(60px)
+		.logo
+			order: -1
+			margin: 0 auto r(15px)
+		ul
+			display: flex
+			flex-direction: column
+			align-items: center
+			li
+				margin: 0 0 r(15px)
+				font-size: r(20px)
+				width: max-content

@@ -672,29 +672,47 @@ function listBanerSlide() {
 }
 
 function menuFake() {
-	let menuleft = $("header .main-nav .left-nav .navbar-nav .nav-item");
-	let menuright = $("header .main-nav .right-nav .navbar-nav .nav-item");
-	let footer = $(".footer");
-	menuleft.clone().appendTo("#fake-header .menu-fake-header");
-	menuright.clone().appendTo("#fake-header .menu-fake-header");
-	var e = $("header .main-list-wrapper").html();
-	$("#fake-header").append(e);
-	$("#fake-header-open").on("click", function () {
-		$(".menu-fullscreen").addClass("active");
-	});
-	$(".icon-close").click(function () {
-		$(".menu-fullscreen").removeClass("active");
-	});
-	$("#fake-header .close-button").on("click", function () {
-		$("#fake-header").removeClass("active");
-	});
-	if ($(".full-page").length >= 1) {
-		footer.appendTo(".full-page .home-7");
-	} else {
-		footer.appendTo("footer");
-	}
+	// let menuleft = $("header .main-nav .left-nav .navbar-nav .nav-item");
+	// let menuright = $("header .main-nav .right-nav .navbar-nav .nav-item");
+	// let footer = $(".footer");
+	// menuleft.clone().appendTo("#fake-header .menu-fake-header");
+	// menuright.clone().appendTo("#fake-header .menu-fake-header");
+	// var e = $("header .main-list-wrapper").html();
+	// $("#fake-header").append(e);
+	// $("#fake-header-open").on("click", function () {
+	// 	$(".menu-fullscreen").addClass("active");
+	// });
+	// $(".icon-close").click(function () {
+	// 	$(".menu-fullscreen").removeClass("active");
+	// });
+	// $("#fake-header .close-button").on("click", function () {
+	// 	$("#fake-header").removeClass("active");
+	// });
+	// if ($(".full-page").length >= 1) {
+	// 	footer.appendTo(".full-page .home-7");
+	// } else {
+	// 	footer.appendTo("footer");
+	// }
+	let menu = $("header .primary-menu");
+	menu.clone().appendTo(".menu-fullscreen");
 }
+// function toggleMobileMenu() {
+// 	$('.drop-down .title em').on('click', function () {
+// 		if ($(this).parents('.drop-down').hasClass('open-sub')) {
+// 			console.log(12310)
+// 			$('.drop-down .sub-nav').slideUp();
+// 			$('.drop-down').removeClass('open-sub');
+// 		} else {
+// 			$('.drop-down .sub-nav').slideUp();
+// 			$('.drop-down').removeClass('open-sub');
+// 			$(this).parent().next().slideDown();
+// 			$(this).parents('.drop-down').addClass('open-sub')
+// 			console.log(9999)
+// 		}
 
+// 	})
+
+// }
 function tabs() {
 	$(".tabs > li").on("click", function () {
 		var $panel = $(this).closest(".tab-panels");
@@ -1212,5 +1230,4 @@ $(document).ready(function () {
 	moveDetail();
 	wrapTable();
 	clickFullImage();
-	scrollToDiv();
 });

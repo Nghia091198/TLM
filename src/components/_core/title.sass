@@ -4,3 +4,20 @@
 	color: $main
 	line-height: r(42px)
 	position: relative
+	padding-left: 50px
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 33px
+		height: 46px
+		background: url("../img/bg-title.png")no-repeat
+	&.no-icon
+		padding-left: 0
+		&::before
+			display: none
+	&.white
+		color: $white
+		&::before
+			background: url("../img/bg-white.png")no-repeat
