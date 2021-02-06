@@ -87,6 +87,22 @@ header
 	display: flex
 	align-items: center
 	background: $white
+	@media screen and ( max-width: 767.9px )
+		height: auto
+	.primary-menu
+		@media screen and ( max-width: 1023.9px )
+			.logo
+				margin: 0 auto
+			ul
+				display: none
+		@media screen and ( max-width: 767.9px )
+			.logo
+				margin: auto auto auto 0
+				.img
+					align-items: center
+				img
+					width: 75px
+					height: 40px
 .primary-menu
 	display: flex
 	align-items: center
@@ -94,6 +110,8 @@ header
 	width: 100%
 	.logo
 		margin: 0 r(130px)
+		@media screen and ( max-width: 1199.9px )
+			margin: 0 r(60px)
 		.img
 			display: flex
 			width: 145px
@@ -138,5 +156,46 @@ header
 				a
 					width: max-content
 					padding: r(20px)
+
+.toggle-menu
+	@media screen and ( min-width: 1024px )
+		display: none
+	width: 30px
+	padding: 0
+	cursor: pointer
+	position: absolute
+	transition: .3s all ease-in-out
+	margin-left: auto
+	right: 30px
+	top: 50%
+	transform: translateY(-50%)
+	span
+		position: absolute
+		width: 100%
+		display: block
+		height: 3px
+		background-color: $main-2
+		transform: rotate(0deg)
+		transition: .4s all ease-in-out
+		left: 0
+		@media screen and ( max-width: 767.9px )
+			background-color: $main-2
+		&:first-child
+			top: 0
+		&:nth-child(2),
+		&:nth-child(3)
+			top: 10px
+		&:last-child
+			top: 20px
+	&.active
+		span
+			&:first-child,
+			&:last-child
+				left: 50%
+				width: 0
+			&:nth-child(2)
+				transform: rotate(45deg)
+			&:nth-child(3)
+				transform: rotate(-45deg)
 				
 

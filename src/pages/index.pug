@@ -5,9 +5,13 @@ block var
 	- var bodyClass = 'homepage'
 
 block main
+	.menu-fullscreen
+		.close-button
+			.icon-close Close
 	#fake-header-open
 		.open-button
 			span Menu
+		
 	.full-page
 		include ../components/home/h-1/index.pug
 		include ../components/home/h-2/index.pug
