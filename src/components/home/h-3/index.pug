@@ -1,19 +1,21 @@
-section.home-3.main-section
+section.home-3.main-section(setBackground="./img/bg-home3.png")
 	.container.animation-top
-		.section-title Lĩnh vực hoạt động
-		.img-big.backInLeft
-			img(data-src="./img/h3-1.png" alt="" class="lazyload")
-		.wrap-post-small
+		.box-wrap
 			.row
-				.col-lg-3.col-md-12.wrap-text
-					.box-item.box-text.fadeInTopLeft
-						.mota Sản xuất kinh doanh các loại xi măng và các loại vật liệu kết dính khác. Sản xuất, kinh doanh các sản phẩm đồ gỗ nội thất xuất khẩu. Cảng thủy nội địa Xi Măng Sài Gòn nhập nguyên liệu phục vụ sản xuất xi măng. Hợp tác sản xuất bê tông tươi.
-						a(href="").view-detail Xem chi tiết
-				-for(i=0;i<3;i++)
-					.col-lg-3.col-md-4
-						a(href="").box-item.zoom-img.box-img.flipInX
-							img(data-src="./img/h3-2.png" alt="" class="lazyload")
-							.text Cảng Ximăng
-								br
-								| Sài Gòn
-
+				.col-lg-4.col-md-12
+					.wrap-left.fadeInTopLeft
+						.section-title.green.backInDown Giới thiệu CSR
+						.desc.fadeInTopLeft Cuộc sống lý tưởng #[br]dựa trên hạnh phúc #[br] của cộng đồng
+						.content.backInUp Trên cả kinh doanh, với mong muốn cống hiến nhiều hơn cho xã hội, Chủ tịch Hội đồng Quản trị kiêm tổng Giám đốc TLM Corporations đã thành lập Quỹ từ thiện Hoa Phước - Quỹ từ thiện chuyên giúp đỡ trẻ em & người lớn tuổi có hoàn cảnh khó khăn trên khắp cả nước.
+						.btn.btn-primary
+							a(href="") Xem thêm
+				.col-lg-8.col-md-12 
+					.wrap-right.fadeInTopRight
+						-for(i=0;i<3;i++)
+							.item
+								a(href="").img 
+									img.lazyload(data-src="./img/home-3/1.png", alt="")
+								.wrap-inner 
+									.icon
+										img.lazyload(data-src="./img/home-3/icon/1.png", alt="")
+									a(href="").content Chứng nhận giải thưởng

@@ -19,9 +19,14 @@ header
 	.wrap-left
 		display: flex
 		align-items: center
+		@media screen and ( max-width: 479.9px )
+			span
+				display: none
 		em
 			font-weight: 500
 			padding-right: 10px
+			@media screen and ( max-width: 479.9px )
+				font-size: 20px
 		*
 			+text-gradient
 			font-weight: 700
@@ -83,12 +88,14 @@ header
 						color: $white
 .header-bottom
 	// box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+	// display: flex
+	// align-items: center
 	height: 85px
-	display: flex
-	align-items: center
 	background: $white
+	.container
+		height: 100%
 	@media screen and ( max-width: 767.9px )
-		height: auto
+		height: 65px
 	.primary-menu
 		@media screen and ( max-width: 1023.9px )
 			.logo
@@ -108,6 +115,12 @@ header
 	align-items: center
 	justify-content: space-between
 	width: 100%
+	height: 100%
+	.dropdown-menu
+		.title
+			em
+				@media screen and ( min-width: 1023.9px )
+					display: none
 	.logo
 		margin: 0 r(130px)
 		@media screen and ( max-width: 1199.9px )
@@ -115,47 +128,81 @@ header
 		.img
 			display: flex
 			width: 145px
-			height: 66px
 	ul
 		list-style: none
 		padding: 0
+		margin: 0
+		width: 100%
+		height: 100%
 		display: flex
 		justify-content: space-between
-		width: 100%
 		li
 			font-weight: 700
 			text-transform: uppercase
 			position: relative
+			display: inline-flex;
+			align-items: center
+			cursor: pointer;
+			>a
+				position: relative;
 			&.active
+				>a
+					&::before
+						content: ""
+						position: absolute
+						bottom: 1px
+						height: 2px
+						left: 0
+						width: 100%
+						background: $bg-gradient
+				a, em
+					+text-gradient
+					text-decoration: underline		
+			>a
 				&::before
 					content: ""
 					position: absolute
 					bottom: 1px
 					height: 2px
 					left: 0
-					width: 100%
+					width: 0
 					background: $bg-gradient
-				a, em
-					+text-gradient
-					text-decoration: underline
+					transition: .3s all
 			&:hover
+				+text-gradient
+				&::before
+					width: 100%
 				.dropdown
+					// top: 100%
 					opacity: 1
 					visibility: visible
-			.dropdown
-				position: absolute
-				top: 20px
-				display: flex
-				flex-direction: column
-				justify-content: center
-				align-items: center
-				opacity: 0
-				visibility: hidden
-				// transform: translateY(30%)
-				transition: .3s all
-				a
-					width: max-content
-					padding: r(20px)
+			@media screen and ( min-width: 1024px )		
+				.dropdown
+					position: absolute
+					top: 100%
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					opacity: 0
+					visibility: hidden
+					background-color: $white
+					left: 50%
+					transform: translateX(-50%)
+					transition: .3s all
+					.dropdown-item
+						+dc
+						min-width: 190px
+						padding: r(20px)
+						font-size: 14px;
+						font-weight: 700;
+						text-transform: uppercase;
+						color: $color-33
+						border: 1px solid $color-eb;
+						&:hover
+							*
+								+text-gradient
+	
 
 .toggle-menu
 	@media screen and ( min-width: 1024px )
@@ -169,6 +216,7 @@ header
 	right: 30px
 	top: 50%
 	transform: translateY(-50%)
+	margin-top: 5px
 	span
 		position: absolute
 		width: 100%

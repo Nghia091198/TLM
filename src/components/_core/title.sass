@@ -4,7 +4,8 @@
 	color: $main
 	line-height: r(42px)
 	position: relative
-	padding-left: 50px
+	padding-left: 35px
+	margin-bottom: r(30px)
 	&::before
 		content: ""
 		position: absolute
@@ -19,5 +20,8 @@
 			display: none
 	&.white
 		color: $white
+		padding-left: r(50px)
 		&::before
-			background: url("../img/bg-white.png")no-repeat
+			background: url("../img/bg-title-white.png")no-repeat
+	&.green
+		color: $main-2

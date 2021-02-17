@@ -49,7 +49,7 @@
 //-             button.button-search
 //-                 em.material-icons search
 header
-    .header-top
+    section.header-top
         .container
             .header-top-primary
                 .wrap-left
@@ -62,21 +62,35 @@ header
                 .wrap-language VN
                     .dropdown
                         a(href="").item EN
-    .header-bottom
+    section.header-bottom
         .container
             .primary-menu
                 ul
                     li.active
                         a(href="")
                             em.ri-home-6-fill
-                    li
-                        a(href="") Giới thiệu
+                    li.dropdown-menu
+                        .title
+                            a(href="") Giới thiệu
+                            em.ri-arrow-down-s-line
                         .dropdown
-                            a(href="") Item 1
-                            a(href="") Item 2
-                            a(href="") Item 3
-                    li
-                        a(href="") Dự án
+                            .dropdown-item
+                                a(href="") Item 1
+                            .dropdown-item
+                                a(href="") Item 1
+                            .dropdown-item
+                                a(href="") Item 1
+                    li.dropdown-menu
+                        .title
+                            a(href="") Dự Án
+                            em.ri-arrow-down-s-line
+                        .dropdown
+                            .dropdown-item
+                                a(href="") Item 1
+                            .dropdown-item
+                                a(href="") Item 1
+                            .dropdown-item
+                                a(href="") Item 1
                     li
                         a(href="") Tin tức
                 .logo

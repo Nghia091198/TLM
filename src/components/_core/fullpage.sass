@@ -603,7 +603,39 @@
 			display: flex
 			flex-direction: column
 			align-items: center
+			height: auto
+			justify-content: flex-start
 			li
+				display: block
+				text-align: center
 				margin: 0 0 r(15px)
 				font-size: r(20px)
 				width: max-content
+				&:hover
+					.dropdown
+						display: none
+		.dropdown-menu
+			.title
+				em
+					padding-left: 5px
+					display: inline-block
+		.dropdown
+			position: relative
+			min-width: 190px
+			transform: translate(0)
+			top: 0
+			left: 0
+			opacity: 1
+			visibility: visible
+			transition: unset
+			.dropdown-item
+				padding: r(15px)
+				color: $white
+				border: 1px solid $color-eb
+			&:hover
+				.dropdown
+					top: 0		
+		.dropdown
+			display: none
+			background-color: $main-2
+				

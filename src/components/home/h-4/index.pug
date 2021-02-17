@@ -1,36 +1,20 @@
-section.home-4.main-section(setBackground="./img/h4-banner.png")#home-4
-	//- .box-test-img
-	//- 	img(data-src="./img/h4-banner.png" alt="" class="lazyload")
+section.home-4(setBackground="./img/home-4/bg.png")#home-4
 	#test-img
 	.wrap-container.animation-left
-		.row
-			.col-xl-3
-				.home-4-slide-big
-					.swiper-container 
-						.swiper-wrapper 
-							- for (x=0; x<5; x++)
-								.swiper-slide
-									.box-wrap.box-text-left
-										.section-title.line-top GIÀN KHOAN
-											br
-											| VIETSEVPETRO #{x}
-										.mota
-											p SDC là đơn vị hợp tác duy nhất với liên doanh XNLD Vietsovpetro đã đưa vào sử dụng các loại xi măng trám giếng khoan chuyên dụng, mang lại hiệu quả kinh tế kỹ thuật cao OWC, OWC-S, OWCL và OWCL-S
-										a(href="").view-detail Xem chi tiết
-			.col-xl-9
-				.box-wrap.box-slide
-					.swiper-container
-						.swiper-wrapper
-							- for (x=0; x<5; x++)
-								.swiper-slide
-									.box-img(src="dasdas")
-										img(data-src="./img/h4-banner.png" alt="" class="lazyload")
-										.title LANDMARK #{x}
-					.wrap-count-slide
-						.wrap-button
-							.button-prev
-								img(data-src="./img/icon/icon-prev.png" alt="" class="lazyload")
-							.button-next
-								img(data-src="./img/icon/icon-next.png" alt="" class="lazyload")
-						.line
-						.count 01
+		.section-title.white Dự án
+		.box-wrap.box-slide
+			.swiper-container
+				.swiper-wrapper
+					- for (x=0; x<5; x++)
+						.swiper-slide
+							.box-img(src="dasdas")
+								img(data-src="./img/home-4/bg.png" alt="" class="lazyload")
+								.title LANDMARK #{x}
+					//- .wrap-count-slide
+					//- 	.wrap-button
+					//- 		.button-prev
+					//- 			img(data-src="./img/icon/icon-prev.png" alt="" class="lazyload")
+					//- 		.button-next
+					//- 			img(data-src="./img/icon/icon-next.png" alt="" class="lazyload")
+						//- .line
+						//- .count 01
