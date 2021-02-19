@@ -1,128 +1,79 @@
-section.lien-he
-    .container-16
-        .row
-            .col-lg-3
-                .title-small Xin chào
-            .col-lg-9
-                .section-title.main.no-line Chúng tôi luôn sẵn sàng
-                    br
-                    | kết nối cùng bạn.
-section.lien-he-2(setBackground="./img/lien-he/bg-cham-lh.png")
-    .container-16
-        .row
-            .col-xl-3
-                .title-small Các bộ phận
-            .col-xl-9
-                .wrap-right
-                    .swiper-container
-                        .swiper-wrapper
-                            -for(i=0;i<5;i++)
-                                .swiper-slide
-                                    .wrap-hotline
-                                        .circle
-                                            img(data-src="./img/h2-1.png" alt="" class="lazyload")
-                                        .wrap-text
-                                            .section-title.main.no-line Xí nghiệp Ximăng
-                                            .title-small Hotline ((028) 37 325 534)
-                                                br
-                                                | sdc-info@sdc.com.vn
-                    .row
-                        .col-xl-4.col-lg-5
-                        .col-xl-8.col-lg-7
-                            .wrap-button
-                                .button-prev
-                                    img(data-src="./img/icon/icon-black-prev.png" alt="" class="lazyload")
-                                .button-next
-                                    img(data-src="./img/icon/icon-next-black.png" alt="" class="lazyload")
-section.lien-he-3
-    .container-16
-        .row
-            .col-xl-3
-                .title Thông tin liên hệ
-            .col-xl-9
-                .wrap-box-1
-                    .row
-                        .col-lg-5
-                            .wrap-text-lh
-                                .title-lh Trụ sở đăng ký của Công ty
-                                .des-lh 143/7D Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, Tp. Hồ Chí Minh.
-                            .wrap-text-lh
-                                .title-lh Nhà máy sản xuất
-                                .des-lh Số 65 đường 12, Khu phố Long Sơn, Phường Long Bình, Quận 9, Tp. Hồ Chí Minh
-                        .col-lg-4
-                            .box-lien-he
-                                .title-lh LIÊN HỆ
-                                .des-lh sdc-info@sdc.com.vn
-                                    br
-                                    |(028) 37 325 534 –
-                                    br
-                                    |(028) 37 325 363
-                                    br
-                                    |fax (028) 37 325 364
-                        .col-lg-3
-                            .box-lien-he
-                                .title-lh GIỜ LÀM VIỆC:
-                                .des-lh sdc-info@sdc.com.vn
-                                    br
-                                    |(028) 37 325 534 –
-                                    br
-                                    |(028) 37 325 363
-                                    br
-                                    |fax (028) 37 325 364
-                .wrap-box-1
-                    .row
-                        .col-lg-5
-                            .box-menu-lh
-                                .title-lh Mạng xã hội
-                                ul.list-menu.type-none
-                                    li
-                                        a(href="") Facebook
-                                    li
-                                        a(href="") Youtube
-                        .col-lg-4
-                            .box-menu-lh.lh-2
-                                .title-lh Liên kết nhanh
-                                ul.list-menu.type-none
-                                    li
-                                        a(href="") Trang chủ
-                                    li
-                                        a(href="") Giới thiệu
-                        .col-lg-3
-                            .box-menu-lh.lh-2
-                                ul.list-menu.type-none
-                                    li
-                                        a(href="") Sản phẩm
-                                    li
-                                        a(href="") Tin tức
-                                    li
-                                        a(href="") Dự án
-                                    li
-                                        a(href="") Liên hệ
-                .wrap-form-lh
-                    .wrap-form
-                        .form-row
-                            .form-group
-                                input(type="text" placeholder="Tên")
-                            .form-group
-                                input(type="text" placeholder="Email")
-                        .form-row
-                            .form-group
-                                input(type="text" placeholder="Điện thoại")
-                            .form-group
-                                input(type="text" placeholder="Địa chỉ")
-                        .form-group
-                            textarea(name="" cols="30" rows="10" placeholder="Nội dung")
-                        .form-group.frm-btnwrap
-                            .frm-btn
-                                input(type="submit" value="Gửi thông tin")
-section.wrap-map-lh
-    iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.224411665507!2d106.6968644!3d10.7878512!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb2887356ab89d12b!2sC%C3%A1nh%20Cam%20-%20Web%20Design%20Agency!5e0!3m2!1svi!2s!4v1609124637237!5m2!1svi!2s' width='100%' height='100%' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
-section.footer-lh
-    .container-16
-        .row
-            .col-lg-3
-            .col-lg-9
-                .logo
-                    img(data-src="./img/logo-footer.png" alt="" class="lazyload")
-                .end-footer
-                    p © Copyright 2020 SDC. All Rights Reserved. Powered By Canh Cam
+section.lien-he(setBackground="./img/home-2/bg.png")
+	.container-16
+		.section-title2
+			.img
+				img(src="./img/bg-title.png", alt="")
+			p Liên hệ
+		.row
+			.col-xl-4.col-lg-6
+				.wrap-left
+					.title Tập đoàn Bất động sản TLM
+					.wrap-text-lh
+						.title-lh Trụ sở chính 
+						ul.des-lh.type-none
+							li
+								i.ri-map-pin-fill
+								p 188 Nam Kỳ Khởi Nghĩa, Phường 6, Quận 3, TP. HCM 
+							li
+								i.ri-mail-fill
+								p info@tlmcorp
+							li
+								i.ri-global-line
+								p www.tlmcorp.vn
+
+							li
+								i.ri-phone-fill
+								p 1800 5555 49
+					.wrap-text-lh
+						.title-lh Văn phòng Hà Nội
+						ul.des-lh.type-none
+							li
+								i.ri-map-pin-fill
+								p 4A Láng Hạ, P. Thành Công, Q. Ba Đình, TP. Hà Nội
+					.wrap-text-lh
+						.title-lh Phòng Chăm Sóc Khách Hàng
+						ul.des-lh.type-none
+							li
+								i.ri-phone-fill
+								p 0911 112 629
+					.wrap-text-lh
+						.title-lh Phòng Tuyển Dụng
+						ul.des-lh.type-none
+							li
+								i.ri-mail-fill
+								p tuyendung@tlmcorp.vn 
+							li
+								i.ri-phone-fill
+								p 0367 375 085 (Ms. Kim Đào)
+			
+
+			.col-xl-8.col-lg-6
+				.wrap-right
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3811544586533!2d106.69044381474897!3d10.782091492317706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3123215dd5%3A0xa560c96ead3ec17d!2zMTg4IE5hbSBL4buzIEto4bufaSBOZ2jEqWEsIFBoxrDhu51uZyA2LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1613549952744!5m2!1svi!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
+
+
+section.lien-he-2(setBackground="./img/lien-he/bnf.png")
+	.container-16
+		.section-title2
+			.img
+				img(src="./img/bg-title.png", alt="")
+			p Liên hệ với chúng tôi
+		.wrap-form-lh
+			.wrap-form
+				.form-row
+					.form-group
+						input(type="text" placeholder="Tên")
+					.form-group
+						input(type="text" placeholder="Email")
+				.form-row
+					.form-group
+						input(type="text" placeholder="Điện thoại")
+					.form-group
+						input(type="text" placeholder="Địa chỉ")
+				.form-group
+					textarea(name="" cols="30" rows="10" placeholder="Nội dung")
+				.form-group.frm-btnwrap
+					.frm-btn
+						//- .btn.btn-primary.text-center
+							a(href="") Gửi
+						input(type="submit" value="Gửi ")

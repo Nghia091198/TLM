@@ -1,0 +1,46 @@
+section.thu-vien-anh
+	.container
+		.global-tab
+			.tab-wrap
+				ul.type-none
+					li
+						a(href="#") Thư viện ảnh
+					li
+						a(href="#") Thư viện video
+		.heading
+			.section-title2
+				.img
+					img(src="./img/bg-title.png", alt="")
+				p Thư viện ảnh
+			.sub-tab 
+				ul.type-none
+					li
+						a(href="#") Hình dự án
+					li
+						a(href="#") Hình TLM Corp
+					
+						
+		.thuvien-list
+			.row
+				-for(x=0;x<3;x++)
+					.col-lg-4
+						.box-wrap
+							a(href="#").img.zoom-img
+								img(src="./img/thu-vien/tv1.png", alt="")
+							.info 
+								a(href="#") Album 1
+
+			.row
+				-for(x=0;x<2;x++)
+					.col-lg-6.col-md-6
+						.box-wrap
+							a(href="#").img.zoom-img
+								img(src="./img/bn-child.png", alt="")
+							.info 
+								a(href="#") Album 1
+
+
+
+
+	
+
