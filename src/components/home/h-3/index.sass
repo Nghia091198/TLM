@@ -10,9 +10,13 @@
 		height: 100%
 		@media screen and ( min-width: 1201.9px )
 			padding-top: r(180px)
+		@media screen and ( max-width: 1279.9px )
+			padding-top: r(60px)
 		.wrap-left
 			@media screen and ( min-width: 1520px )
 				padding-right: r(50px)
+			@media screen and ( max-width: 1279.9px )
+				margin-bottom: r(30px)
 			.section-title
 				font-size: r(18px)
 				line-height: 1
@@ -27,6 +31,8 @@
 				padding-right: r(100px)
 		.wrap-right
 			display: flex
+			@media screen and ( max-width: 1279.9px )
+				justify-content: center
 			.item
 				flex: 0 0 260px
 				border-radius: 18px
@@ -36,6 +42,8 @@
 				z-index: 3
 				transform: translateY(0px)
 				transition: .3s all
+				@media screen and ( max-width: 1023.9px )
+					flex: 0 0 (100% / 3)
 				>.img
 					+img-ratio(400/260)
 				&:last-child

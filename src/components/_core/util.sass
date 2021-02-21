@@ -309,3 +309,39 @@ span.fa-exclamation-triangle
 // 	&.active
 // 		&::before
 // 			opacity: 1
+.inner-date
+	height: 24px
+	width: 96px
+	background-color: $main
+	position: absolute
+	transform: rotate(-90deg)
+	transform-origin: 0 0
+	letter-spacing: 1.3px
+	color: $white
+	font-size: 13px
+	text-align: center
+	transition: .3s all
+.seemore
+	position: relative
+	text-transform: uppercase
+	font-size: 12px
+	font-weight: 700
+	color: $main
+	letter-spacing: 2.4px
+	display: inline-block
+	margin-top: r(30px)
+	transition: .3s all
+	&::before
+		content: ""
+		position: absolute
+		right: -25px
+		top: 50%
+		transform: translateY(-50%)
+		width: 15px
+		height: 1px
+		background-color: $main
+	&:hover
+		color: $main-2
+		&::before
+			background-color: $main-2
+	

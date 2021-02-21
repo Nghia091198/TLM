@@ -1,26 +1,73 @@
-section.home-6.main-section(setBackground="./img/h6_bg.png")
-	.wrap-h6-1.animation-top
-		.container
-			.section-title.black TUYỂN DỤNG
-			.des SDC không ngừng tìm kiếm các ứng viên tài năng với chính sách đãi ngộ hấp dẫn
-			.wrap-text
-				.title Năng động và hiệu quả tạo nên sự chuyên nghiệp
-				.mota Gia nhập SDC, các bạn có thể thỏa sức khẳng định năng lực, giá trị bản thân và chinh phục những mức thu nhập đột phá…
-				.view-more
-					a(href="").icon-link.black
-						img(data-src="./img/icon/icon-arrow-black.png" alt="" class="lazyload")
-	.wrap-doitac.animation-top
-		.container
-			.wrap-slide
-				.swiper-container
-					.swiper-wrapper
-						-for(i=1;i<5;i++)
-							.swiper-slide
-								.img
-									a(href="")
-										img(data-src="./img/img-doi-tac/dt-"+i+".png" alt="" class="lazyload")
-				.wrap-button
-					.button-prev-1
-						img(data-src="./img/icon/icon-prev.png" alt="" class="lazyload")
-					.button-next-1
-						img(data-src="./img/icon/icon-next.png" alt="" class="lazyload")
+section.home-6.main-section(setBackground="./img/bg-footer.png")
+	.bg-fake(setBackground="./img/icon.png")
+		.wrap-partner.animation-right
+			.container 
+				.section-title Đối tác
+				.swiper-partner 
+					.swiper-container 
+						.swiper-wrapper
+							-for(i=0; i<9; i++)
+								.swiper-slide 
+									.item 
+										.img 
+											img.lazyload(data-src="./img/doi-tac.png")
+					.wrap-button 
+						.button-next
+						.button-prev
+		.footer.animation-left
+			.container
+				.section-title Liên hệ
+				.wrap-address 
+					.item 
+						.item-content
+							.title 
+								em.ri-map-pin-fill
+								span Tập đoàn Bất động sản TLM
+							.content 188 Nam Kỳ Khởi Nghĩa, Phường 6, Quận 3, TP. HCM
+					.item 
+						.item-content
+							.title 
+								em.ri-map-pin-fill
+								span Chi nhánh tại Hà Nội
+							.content Tòa nhà Harec, số 4A Láng Hạ, Phường Thành Công, Quận Ba Đình, TP. Hà Nội
+					.item 
+						.item-content
+							.title 
+								em.ri-mail-send-fill
+								span Đăng ký nhận tư vấn
+							.subcribe 
+								.subcribefrm 
+									input(type="text", placeholder="Nhập địa chỉ email")
+									button Gửi
+				.footer-menu
+					ul 
+						li.active
+							a(href="") 
+								em.ri-home-6-fill
+						li 
+							a(href="") Giới thiệu 
+						li 
+							a(href="") Dự án 
+						li 
+							a(href="") Thư viện
+						li 
+							a(href="") Nhân lực 
+						li 
+							a(href="") Liên hệ
+					ul 
+						li
+							a(href="") Điều khoản sử dụng
+						li 
+							a(href="") Chính sách bảo mật
+						li 
+							a(href="") Sơ đồ trang web
+					.copyright
+						span Copyright © 2020 Bản quyền thuộc về TLM Corp. Thiết kế Website bởi
+						a(href="https://www.canhcam.vn/thiet-ke-website?gclid=cjwkcaiag8obbha8eiwalkw3krucdtoh4z3o84bxdbxxmstdm8lkuanobgj90lauraxei2evkr74jbocemyqavd_bwe")  Cánh Cam.
+					.social 
+						a(href="")
+							em.ri-facebook-box-fill 
+						a(href="")
+							em.ri-youtube-fill 
+						a(href="")
+							em.ri-instagram-line

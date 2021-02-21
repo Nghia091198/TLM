@@ -1,49 +1,21 @@
-section.home-5.main-section(setBackground="./img/h5-bg.png")
-	.warp-container.animation-right
-		.Module
-			.ModuleContent
-				h2.section-title.black TIN TỨC
-				.row
-					.col-lg-6
-						.post-big.moveInRight
-							.img.zoom-img
-								a(href="")
-									img(src="./img/tct-1.png" alt="")
-							.wrap-text
-								.content
-									a(href="").title BROCHURE SP XI MĂNG
-									.desc Lorem ipsum dolor sit amet, consecte adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								.wrap-button
-									a(href="").view-detail Xem chi tiết
-					.col-lg-6
-						-for(i=0;i<3;i++)
-							.post-small.moveInLeft
-								.img.zoom-img
-									a(href="")
-										img(src="./img/tct-1.png" alt="")
-								.text
-									a(href="").title BROCHURE SP XI Măng
-									.desc Lorem ipsum dolor sit amet, consecte adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-
-		//- .wrap-big
-		//- 	.img.zoom-img
-		//- 		a(href="")
-		//- 			img(data-src="./img/h5-imgBig.png" alt="" class="lazyload")
-		//- 	.wrap-text
-		//- 		.date 28
-		//- 			span 10-2020
-		//- 		.wrap-left
-		//- 			a(href="").title-link THAY ĐỔI CÁCH NHÌN VỀ SẢN XUẤT XI MĂNG
-		//- 			a(href="").view-detail Xem chi tiết
-		//- .wrap-small
-		//- 	-for(i=0;i<2;i++)
-		//- 		a(href="").box-post-small
-		//- 			.img.zoom-img
-		//- 				img(data-src="./img/h5-2.png" alt="" class="lazyload")
-		//- 				.date 28
-		//- 					span 10-2020
-		//- 			.wrap-title CẠNH TRANH BẰNG SẢN PHẨM KHÁC BIỆT
-		//- 			.view-detail Xem Chi tiết
-
+section.home-5.main-section(setBackground="./img/home-5/bg-2.png")
+	.container.animation-right
+		.title-center
+			.section-title.main.backInDown.text-center Tin tức
+		.swiper-news.backInDown
+			.swiper-container 
+				.swiper-wrapper
+					-for(i=0; i<5; i++)
+						.swiper-slide 
+							.item
+								a(href="").img
+									img.lazyload(data-src="./img/home-5/1.png")
+								.box-content
+									a(href="").title.sm Đô thị sinh thái King Bay hưởng lợi từ phát triển hạ tầng
+									.desc Lợi thế hạ tầng giao thông đồng bộ, kinh tế phát triển của Nhơn Trạch (Đồng Nai) giúp King Bay thu hút nhà đầu tư.
+									.inner-date 15.09.2020
+									a(href="").seemore Xem thêm
+			.wrap-button 
+				.button-next
+				.button-prev
 
