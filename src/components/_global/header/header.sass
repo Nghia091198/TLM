@@ -140,21 +140,23 @@ header
 			font-weight: 700
 			text-transform: uppercase
 			position: relative
-			display: inline-flex;
+			display: inline-flex
 			align-items: center
-			cursor: pointer;
+			cursor: pointer
 			>a
-				position: relative;
+				position: relative
 			&.active
-				>a
-					&::before
-						content: ""
-						position: absolute
-						bottom: 1px
-						height: 2px
-						left: 0
-						width: 100%
-						background: $bg-gradient
+				.title
+					position: relative
+					a
+						&::before
+							content: ""
+							position: absolute
+							bottom: 1px
+							height: 2px
+							left: 0
+							width: 100%
+							background: $bg-gradient
 				a, em
 					+text-gradient
 					text-decoration: underline		
@@ -169,8 +171,10 @@ header
 					background: $bg-gradient
 					transition: .3s all
 			&:hover
-				a
-					+text-gradient
+				.title
+					a
+						+text-gradient
+						transition: .3s all ease-in-out
 				&::before
 					width: 100%
 				.dropdown
