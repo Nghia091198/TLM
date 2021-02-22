@@ -1,28 +1,26 @@
-.home-4
-	position: relative
-	&::before
-		content: ""
-		background: $bg-gradient
+.wrap-slide-s4
+	display: flex
+	.swiper-container
 		width: 100%
-		height: 100%
-		position: absolute
-		top: 0
-		left: 0
-	.container
-		margin-right: 0
-		// margin-left: auto
-		padding-right: 0
-		max-width: 100%
-		.swiper-home-4
-			.swiper-wrapper
-				text-align: center
-			// .swiper-slide-prev
-			// 	opacity: 0
-			// 	visibility: hidden
-			.swiper-slide
-				width: 185px!important
-				&.swiper-slide-active
-					width: 1200px !important
-					img
-						width: 100%
-						height: 630px
+		height: 630px
+	.s4-left
+		flex: 0 0 10%
+		max-width: 10%
+	.s4-right
+		flex: 0 0 90%
+		max-width: 90%
+		display: flex
+		justify-content: center
+		.wrapper
+			height: 100%
+			a
+				display: block
+				height: 100%
+				img
+					width: 100%
+					height: 100%
+		.swiper-slide
+			flex: 0 0 15.6755%
+			transition: .3s all ease-in-out
+			&-active
+				flex: 0 0 68.649% !important
