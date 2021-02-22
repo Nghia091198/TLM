@@ -260,11 +260,14 @@ function listBanerSlide() {
             crossFade: true,
         },
     });
-    var home4_2 = new Swiper(".home-4 .swiper-home-4 .swiper-container", {
-        slidesPerView: 3,
-        // centeredSlides: true,
+    var home4_2 = new Swiper("#ka-swiper1", {
+        paginationClickable: true,
+        slidesPerView: "auto",
+        loop: true,
         spaceBetween: 5,
-        speed: 1000,
+        // autoHeight: true,
+        // speed: 1000,
+        // autoHeight: true,
         // loop: true,
         // clickable: false,
         // autoplay: 500,

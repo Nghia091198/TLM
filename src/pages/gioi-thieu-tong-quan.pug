@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+    - var title = 'Tổng Quan'
+    - var bodyClass = 'intro-page'
+block main
+    include ../components/banner/pages-banner
+    include ../components/breadcrumb/breadcrumb
+    include ../components/gioi-thieu/tong-quan/index.pug
