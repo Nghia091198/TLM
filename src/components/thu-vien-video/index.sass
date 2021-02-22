@@ -1,0 +1,99 @@
+.thu-vien-video
+	position: relative
+	background-image: url(../img/home-2/bg.png)
+	
+	.heading
+		padding: 30px 0
+		.sub-tab
+			ul
+				display: flex
+				justify-content: center
+				align-items: center
+				
+				li
+					padding: 0 40px
+					position: relative
+					font-size: 16px
+					font-weight: 600
+					color: $color-99
+					@media(max-width: 576px)
+						font-size: 14px
+						padding: 0 20px
+					&:first-child
+						padding-left: 0
+						&::before
+							display: none
+					&:last-child
+						padding-right: 0
+					&::before
+						width: 2px
+						height: 14px
+						position: absolute
+						content: ""
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+						background-color: $color-99
+	
+					a
+						&:hover
+							color: $main
+							+hover-underline(95%, $main)
+	.thuvien-list
+		
+		.box
+			margin-bottom: 30px
+		.box-wrap
+			position: relative
+			overflow: hidden
+			border-radius: 3px
+			margin-bottom: 30px
+			transition: .5s ease-in-out all
+			width: 100%
+			height: 100%
+			padding: 0
+			cursor: pointer
+			&:hover
+				.bg-dark
+					opacity: 0
+			.img
+				width: 100%
+				height: 100%
+				img
+					object-fit: cover
+					width: 100%
+					height: 100%
+			.bg-dark
+				width: 100%
+				height: 100%
+				background: rgba(0,0 ,0 ,0.5 )
+				position: absolute
+				top: 0
+				left: 0
+				
+			.info
+				position: absolute
+				left: 50%
+				top: 55%
+				transform: translate(-50%,-50%)
+
+				a
+					font-size: 14px
+					color: $white
+					transition: .2s ease-in-out all
+					position: relative
+					
+					
+					&:hover
+						cursor: pointer
+						
+						border-bottom: 1px solid $white
+					&::before
+						content: "\F287"
+						position: absolute
+						font-family: "remixicon"
+						top: -37px
+						left: 50%
+						transform: translateX(-50%)
+						font-size: 30px
+						

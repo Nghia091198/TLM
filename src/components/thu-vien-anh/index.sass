@@ -1,0 +1,78 @@
+.thu-vien-anh
+	position: relative
+	background-image: url(../img/home-2/bg.png)
+	
+	.heading
+		padding: 30px 0
+		.sub-tab
+			ul
+				display: flex
+				justify-content: center
+				align-items: center
+				
+				li
+					padding: 0 40px
+					position: relative
+					font-size: 16px
+					font-weight: 600
+					color: $color-99
+					@media(max-width: 576px)
+						font-size: 14px
+						padding: 0 20px
+					&:first-child
+						&::before
+							display: none
+			
+					&::before
+						width: 2px
+						height: 14px
+						position: absolute
+						content: ""
+						top: 50%
+						left: 0
+						transform: translateY(-50%)
+						background-color: $color-99
+	
+					a
+						&:hover
+							color: $main
+							+hover-underline(95%, $main)
+	.thuvien-list
+	
+		.box-wrap
+			position: relative
+			overflow: hidden
+			border-radius: 3px
+			margin-bottom: 30px
+			transition: .2s ease-in-out all
+			
+			.img
+				width: 100%
+				height: 100%
+				img
+					object-fit: contain
+					width: 100%
+					height: 100%
+			.info
+				position: absolute
+				left: 50px
+				bottom: 10%
+
+				a
+					font-size: 14px
+					color: $white
+					transition: .2s ease-in-out all
+					position: relative
+					
+					&:hover
+						cursor: pointer
+						
+						border-bottom: 1px solid $white
+					&::before
+						content: "\EB2E"
+						position: absolute
+						font-family: "remixicon"
+						bottom: 0
+						left: -25px
+						font-size: 18px
+						transform: translateY(5%)

@@ -260,11 +260,14 @@ function listBanerSlide() {
             crossFade: true,
         },
     });
-    var home4_2 = new Swiper(".home-4 .swiper-home-4 .swiper-container", {
-        slidesPerView: 3,
-        // centeredSlides: true,
+    var home4_2 = new Swiper("#ka-swiper1", {
+        paginationClickable: true,
+        slidesPerView: "auto",
+        loop: true,
         spaceBetween: 5,
-        speed: 1000,
+        // autoHeight: true,
+        // speed: 1000,
+        // autoHeight: true,
         // loop: true,
         // clickable: false,
         // autoplay: 500,
@@ -725,12 +728,9 @@ function menuFake() {
     // } else {
     // 	footer.appendTo("footer");
     // }
-
 }
 
 function toggleMobileMenu() {
-
-
     // 	$('.drop-down .title em').on('click', function () {
     // 		if ($(this).parents('.drop-down').hasClass('open-sub')) {
     // 			console.log(12310)
@@ -743,9 +743,7 @@ function toggleMobileMenu() {
     // 			$(this).parents('.drop-down').addClass('open-sub')
     // 			console.log(9999)
     // 		}
-
     // 	})
-
 }
 
 function tabs() {
@@ -1244,18 +1242,18 @@ const clickScrollTo = () => {
 };
 
 function dropDownMenu() {
-    $('.primary-menu .title em').on('click', function() {
+    $(".primary-menu .title em").on("click", function() {
         // $(this).parents("li").addClass("open-sub");
         if ($(".primary-menu .dropdown-menu").hasClass("open-sub")) {
-            $('.open-sub .dropdown').slideUp();
-            $('.dropdown-menu').removeClass('open-sub');
+            $(".open-sub .dropdown").slideUp();
+            $(".dropdown-menu").removeClass("open-sub");
         } else {
-            $('.dropdown-menu').removeClass('open-sub');
-            $('.open-sub .dropdown').slideUp();
+            $(".dropdown-menu").removeClass("open-sub");
+            $(".open-sub .dropdown").slideUp();
             $(this).parent().next().slideDown();
-            $(this).parents('.dropdown-menu').addClass('open-sub')
+            $(this).parents(".dropdown-menu").addClass("open-sub");
         }
-    })
+    });
 }
 $(document).ready(function() {
     $(".home-4").attr("id", "home-4");

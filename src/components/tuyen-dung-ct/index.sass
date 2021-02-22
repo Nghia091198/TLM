@@ -1,0 +1,179 @@
+.tuyen-dung-ct
+	background-image: url(../img/tuyen-dung/bgtd.png)
+	.wrapper-box 
+		margin-top: 30px
+		
+		.box-left-top
+			border: 1px dashed $main
+			border-radius: 20px
+			overflow: hidden
+			background: $white
+			margin-bottom: 30px
+			.img
+				width: 100%
+				height: 100%
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		.wrap-content
+
+			.heading
+				border-bottom: thin solid #e1e1e1
+				display: flex
+				justify-content: space-between
+				align-items: center
+				padding: 15px 0
+				.fb
+					font-size: 18px
+					color: $color-99
+					padding-right: 20px
+			.title
+				font-size: 24px
+				color: $main
+				padding-left: 30px
+				@media screen and ( max-width: 578px)
+					font-size: 22px
+			.info
+				table
+					width: 100%
+					tr
+						display: flex
+						padding: 0 20px
+						@media screen and ( max-width: 587px )
+							td
+								&:first-child
+									width: 50%
+									
+								font-size: 12px
+					td
+						display: flex
+						align-items: center
+						padding: 10px 
+						color: $color-66
+						&:first-child
+							width: 40%
+					
+								
+					
+						i
+							margin-right: 10px
+						p
+							font-size: 15px
+				
+					.btn, .btn-bgblue, .btn-bggreen
+						+dc
+						padding-right: 60px
+						width: auto
+						height: 44px
+						border-radius: 10px
+						text-transform: uppercase
+						position: relative
+						transition: .3s all ease-in-out
+						
+						color: $white
+						font-size: 14px
+						position: relative
+						font-weight: 700
+						margin-top: r(20px)
+						margin-bottom: 20px
+						overflow: hidden
+						@media screen and ( max-width: 587px)
+							font-size: 10px
+							
+						&:hover
+							transform: scale(1.1)
+						&::before
+							content: ""
+							position: absolute
+							right: -5px
+							top: 0
+							background: url("../img/btn-icon.png") no-repeat 100% 100%
+							background-position-x: right
+							background-size: contain
+							width: 100%
+							height: 100%
+							pointer-events: none
+							transition: .3s all ease-in-out
+					.btn-bgblue
+						background: $main
+						
+					.btn-bggreen
+						background: $main-2
+		
+			.time
+				td
+					i
+						color: #e60606
+					p
+						color: #e60606
+		.wrap-desc
+			.heading
+				padding: 20px
+				border-bottom: 1px solid #e1e1e1
+				.title
+					font-size: 24px
+					color: $main
+					font-weight: 500
+					@media screen and ( max-width: 578px)
+						font-size: 22px
+
+						
+			.info
+				padding: 10px 20px 30px 40px 
+				li
+					font-size: 16px
+					color: $color-33
+					padding: 10px 0
+					
+					position: relative
+					
+					&::before
+						position: absolute
+						
+						content: "\EB7C"
+						font-family: "remixicon"
+						top: 20px
+						font-size: 10px
+						left: -20px
+						color: #999999
+	.box-right
+		border: 1px dashed $main
+		border-radius: 20px
+		background: $white
+		overflow: hidden
+			
+		.heading
+			padding: 20px
+			border-bottom: 1px solid #e1e1e1
+			.title
+				font-size: 24px
+				color: $main
+				font-weight: 500
+				@media screen and ( max-width: 578px)
+					font-size: 22px
+		.box-content
+			.box-list
+				padding: 20px
+				border-bottom: 1px solid #e1e1e1
+				transition: .5s
+				&:hover
+					background: $bg-gradient2
+					>*
+						color: $white
+					.number
+						color: $white
+				.title
+					font-size: 14px
+					text-transform: uppercase
+					font-weight: 600
+				.address,.number
+					display: flex
+					align-items: center
+					font-size: 15px
+					padding: 5px 0
+					em
+						font-size: 15px
+						margin-right: 10px
+				.number
+					color: $main-2
