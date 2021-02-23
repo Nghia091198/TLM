@@ -25,20 +25,22 @@ section.thu-vien-anh
 				-for(x=0;x<3;x++)
 					.col-lg-4
 						.box-wrap
-							a(href="#").img.zoom-img
-								img(src="./img/thu-vien/tv1.png", alt="")
+							a(href="" , data-fancybox='gallery', data-src="./img/pagebanner.png").img.zoom-img
+								img.lazyload(data-src="./img/pagebanner.png", alt="")
 							.info 
 								a(href="#") Album 1
+			
 
 			.row
 				-for(x=0;x<2;x++)
 					.col-lg-6.col-md-6
 						.box-wrap
-							a(href="#").img.zoom-img
-								img(src="./img/bn-child.png", alt="")
+							a(href="" , data-fancybox='gallery', data-src="./img/bn-child.png").img.zoom-img
+								img.lazyload(data-src="./img/bn-child.png", alt="")
 							.info 
 								a(href="#") Album 1
-
+		
+	
 
 
 

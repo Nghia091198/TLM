@@ -54,7 +54,8 @@
 			padding: 0
 			cursor: pointer
 			&:hover
-				.bg-dark
+				&::before
+					
 					opacity: 0
 			.img
 				width: 100%
@@ -63,13 +64,15 @@
 					object-fit: cover
 					width: 100%
 					height: 100%
-			.bg-dark
-				width: 100%
-				height: 100%
-				background: rgba(0,0 ,0 ,0.5 )
-				position: absolute
-				top: 0
-				left: 0
+			// &::before
+			// 	content: ""
+			// 	width: 100%
+			// 	height: 100%
+			// 	background: rgba(0,0 ,0 ,0.5 )
+			// 	position: absolute
+			// 	top: 0
+			// 	left: 0
+
 				
 			.info
 				position: absolute

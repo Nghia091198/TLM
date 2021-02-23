@@ -244,6 +244,15 @@ function toggleSearchWrapper() {
 }
 
 function listBanerSlide() {
+    //slider trang ho so nang luc
+	var sliderhsnl = new Swiper('.ho-so-nang-luc .swiper-container', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+		  nextEl: '.ho-so-nang-luc .slider .button .button-next',
+		  prevEl: '.ho-so-nang-luc .slider .button .button-prev',
+		},
+	  });
     var myswiper = new Swiper("#home-banner .swiper-container", {
         loop: false,
         speed: 1000,
