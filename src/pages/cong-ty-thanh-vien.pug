@@ -3,8 +3,11 @@ extends _layout.pug
 
 block var
     - var title = 'thanh vien'
-    - var bodyClass = 'thanh vien'
+    - var bodyClass = 'thanh-vien'
 
 block main
-    include ../components/banner/pages-banner.pug
+    include ../components/banner/pages-banner
+    include ../components/breadcrumb/breadcrumb
     include ../components/gioi-thieu/thanh-vien/index.pug
+    include ../components/_global/footer/footer.pug
+    include ../components/home/h-6/index.pug
