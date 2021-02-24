@@ -253,6 +253,31 @@ function listBanerSlide() {
 		  prevEl: '.ho-so-nang-luc .slider .button .button-prev',
 		},
 	  });
+      //slider trong trang tin tuc chi tiet
+      var sliderpostorther = new Swiper('.wrap-post-detail .swiper-container', {
+		slidesPerView: 1,
+        spaceBetween: 20,
+		loop: true,
+		navigation: {
+		  nextEl: '.wrap-post-detail .slider .button .button-next',
+		  prevEl: '.wrap-post-detail .slider .button .button-prev',
+		},
+        breakpoints: {
+            575: {
+                slidesPerView: 1,
+                
+            },
+            768: {
+                slidesPerView: 2,
+                
+            },
+            1024: {
+                slidesPerView: 3,
+                
+            },
+        },
+	  });
+
     var myswiper = new Swiper("#home-banner .swiper-container", {
         loop: false,
         speed: 1000,
