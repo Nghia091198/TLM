@@ -2,8 +2,11 @@ extends _layout.pug
 
 block var
     - var title = 'Liên hệ'
-    - var bodyClass = 'main-lien-he'
+    - var bodyClass = 'intro-page'
 
 block main
     include ../components/banner/pages-banner.pug
+    include ../components/breadcrumb/breadcrumb
     include ../components/lien-he/index.pug
+    include ../components/_global/footer/footer.pug
+    include ../components/home/h-6/index.pug

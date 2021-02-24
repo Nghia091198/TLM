@@ -253,22 +253,22 @@ function fixItem() {
 
 function listBanerSlide() {
     //slider trang ho so nang luc
-	var sliderhsnl = new Swiper('.ho-so-nang-luc .swiper-container', {
-		slidesPerView: 1,
-		loop: true,
-		navigation: {
-		  nextEl: '.ho-so-nang-luc .slider .button .button-next',
-		  prevEl: '.ho-so-nang-luc .slider .button .button-prev',
-		},
-	  });
+	// var sliderhsnl = new Swiper('.ho-so-nang-luc .swiper-container', {
+	// 	slidesPerView: 1,
+	// 	loop: true,
+	// 	navigation: {
+	// 	  nextEl: '.ho-so-nang-luc .slider .button .button-next',
+	// 	  prevEl: '.ho-so-nang-luc .slider .button .button-prev',
+	// 	},
+	//   });
       //slider trong trang tin tuc chi tiet
       var sliderpostorther = new Swiper('.wrap-post-detail .swiper-container', {
 		slidesPerView: 1,
         spaceBetween: 20,
 		loop: true,
 		navigation: {
-		  nextEl: '.wrap-post-detail .slider .button .button-next',
-		  prevEl: '.wrap-post-detail .slider .button .button-prev',
+		  nextEl: '.wrap-post-detail .slider .button-slider .button-next',
+		  prevEl: '.wrap-post-detail .slider .button-slider .button-prev',
 		},
         breakpoints: {
             575: {
