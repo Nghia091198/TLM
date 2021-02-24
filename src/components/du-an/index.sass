@@ -1,0 +1,37 @@
+.du-an
+    .wrap-box
+        display: flex
+        justify-content: space-between
+        margin-bottom: r(60px)
+        flex-wrap: wrap
+        @media screen and ( max-width: 1023.9px )
+            display: block
+        &:last-child
+            margin-bottom: 0
+        .wrap-left
+            flex: 0 0 50%
+            @media screen and ( max-width: 1023.9px )
+                flex: 0 0 100%
+            .img
+                border-radius: 25px
+                +img-ratio(480/637)
+        .wrap-right
+            margin-left: r(30px)
+            flex: 0 0 45%
+            @media screen and ( max-width: 1023.9px )
+                flex: 0 0 100%
+                margin-left: 0
+            .wrap-content
+                padding-top: r(30px)
+                .content
+                    p
+                        margin-bottom: r(20px)
+                        &:first-child
+                            font-weight: 700
+        &:nth-child(even)
+            flex-direction: row-reverse
+            .wrap-right
+                margin-left: 0
+                margin-right: r(30px)
+                @media screen and ( max-width: 1023.9px )
+                    margin-right: 0

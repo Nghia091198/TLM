@@ -1,0 +1,28 @@
+section.section.tong-quan-1.duan-ct(setBackground="./img/du-an/bg-2.jpg")
+    .container
+        .row 
+            .col-lg-6.col-md-12
+                .wrap-left
+                    .wrap-top
+                        .section-title King Bay
+                    .wrap-bottom 
+                        -for(i=1; i<7; i++)
+                            .item 
+                                .icon 
+                                    img.lazyload(data-src="./img/du-an/icon-"+i+".png")
+                                .content 
+                                    .title-small.bold Đối với cổ đông:
+                                    .des Tạo ra giá trị gia tăng bền vững đối với mỗi đồng vốn của cổ đông.
+section.section.duan-ct-2(setBackground="./img/du-an/bg-3.jpg")
+    .container 
+        .title-center 
+            .section-title.white Hình ảnh về King Bay
+        .wrap-box
+            -for(i=8; i<12; i++)
+                .item
+                    a.img.zoom-img(data-fancybox="images" href="./img/du-an/2.png")
+                        img.lazyload(data-src="./img/du-an/2.png")
+                    .inner
+                        .icon
+                            img.lazyload(data-src="./img/du-an/icon-"+i+".png")
+                        a(href="").title-small.white Tổng quan
