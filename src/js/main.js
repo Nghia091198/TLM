@@ -243,6 +243,14 @@ function toggleSearchWrapper() {
     });
 }
 
+function fixItem() {
+    
+    $(".primary-nav").sticky({
+        zIndex: 9,
+        topSpacing: $("header").outerHeight(),
+    });
+}
+
 function listBanerSlide() {
     var myswiper = new Swiper("#home-banner .swiper-container", {
         loop: false,
@@ -260,21 +268,12 @@ function listBanerSlide() {
             crossFade: true,
         },
     });
+    
     var home4_2 = new Swiper("#ka-swiper1", {
         paginationClickable: true,
-        slidesPerView: "auto",
         loop: true,
+        slidesPerView: "auto",
         spaceBetween: 5,
-        // autoHeight: true,
-        // speed: 1000,
-        // autoHeight: true,
-        // loop: true,
-        // clickable: false,
-        // autoplay: 500,
-        // // navigation: {
-        // //     nextEl: ".home-4 .button-next",
-        // //     prevEl: ".home-4 .button-prev",
-        // // },
     });
     // var home4 = new Swiper(".home-4 .swiper-container", {
     //         spaceBetween: 5,
@@ -379,6 +378,24 @@ function listBanerSlide() {
                 slidesPerView: 6,
                 spaceBetween: 30,
             },
+        },
+    });
+    var tongQuan = new Swiper(".swiper-tong-quan .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-tong-quan .button-next",
+            prevEl: ".swiper-tong-quan .button-prev",
+        },
+    });
+    var tongQuan = new Swiper(".swiper-nang-luc .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-nang-luc .button-next",
+            prevEl: ".swiper-nang-luc .button-prev",
         },
     });
     var slideAbout2 = new Swiper(".about-us-2 .swiper-container", {
@@ -1066,7 +1083,7 @@ const openPopupCd = () => {
 const scorllActive = () => {
     let header = $("header").outerHeight();
     // console.log(header);
-    $(".wrap-post-list .filed-nav").activescroll({
+    $(".primary-nav").activescroll({
         scroll: "scroll",
         active: "active",
         offset: header,
@@ -1255,8 +1272,10 @@ function dropDownMenu() {
         }
     });
 }
+
 $(document).ready(function() {
-    $(".home-4").attr("id", "home-4");
+    fixItem();
+    // $(".home-4").attr("id", "home-4");
     checkScorll();
     setBackgroundElement();
     scrollToTop();
@@ -1298,7 +1317,8 @@ $(document).ready(function() {
     // openPopupCd();
     moveDetail();
     wrapTable();
-    clickFullImage();
+    // clickFullImage();
     // New
     clickScrollTo();
+    
 });

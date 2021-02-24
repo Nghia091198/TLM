@@ -4,11 +4,11 @@
 		width: 100%
 		height: 630px
 	.s4-left
-		flex: 0 0 10%
-		max-width: 10%
+		flex: 0 0 10%!important
+		max-width: 10%!important
 	.s4-right
-		flex: 0 0 90%
-		max-width: 90%
+		flex: 0 0 90%!important
+		max-width: 90%!important
 		display: flex
 		justify-content: center
 		.wrapper
@@ -19,8 +19,10 @@
 				img
 					width: 100%
 					height: 100%
-		.swiper-slide
-			flex: 0 0 15.6755%
-			transition: .3s all ease-in-out
-			&-active
-				flex: 0 0 68.649% !important
+	.swiper-slide.swiper-slide-active
+		flex: 0 0 68.649% !important
+		width: 68.649% !important
+	.swiper-slide
+		flex: 0 0 15.6755% !important
+		width: 15.6755% !important
+		// transition: .3s all ease-in-out

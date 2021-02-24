@@ -1,0 +1,35 @@
+.primary-nav
+    margin: 0 0 r(30px)
+    transition: .5s all ease-in-out
+    ul
+        padding: 0
+        list-style: none
+        overflow-x: scroll
+        +dc
+        @media screen and ( max-width: 767.9px )
+            justify-content: flex-start
+        &::-webkit-scrollbar
+            height: 1px
+        &::-webkit-scrollbar-thumb
+            background: $main-2!important
+            width: 5px
+            &:hover
+                background: $main-2!important
+        li
+            background: $white
+            a
+                +dc
+                min-width: 230px
+                padding: r(20px) 0
+                transition: .5s all ease-in-out
+                font-weight: 700
+                color: $color-99
+                white-space: nowrap
+            &.active
+                background-image: linear-gradient(-145deg, #17a654 0%, #17a654 1%, #107dc2 100%)
+                a
+                    color: $white
+            &:hover
+                background-image: linear-gradient(-145deg, #17a654 0%, #17a654 1%, #107dc2 100%)
+                a
+                    color: $white

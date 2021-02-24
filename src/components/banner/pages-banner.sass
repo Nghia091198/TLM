@@ -1,6 +1,6 @@
 #pagebanner
 	position: relative
-	min-height: 70vh
+	height: auto
 	// &.banner-project-detail
 	// 	.img
 	// 		&::before
@@ -26,7 +26,7 @@
 			object-fit: cover
 	.box-text
 		position: absolute
-		bottom: 10%
+		bottom: r(120px)
 		left: 50%
 		transform: translateX(-50%)
 		display: flex
@@ -43,13 +43,15 @@
 			position: relative
 			padding-bottom: 18px
 			&::before
-				width: 100%
+				width: 70%
 				height: 1.5px
 				position: absolute
 				bottom: 0
-				left: 0
+				left: 50%
+				transform: translateX(-50%)
 				background-color: #fff
 				content: ""
+				
 			
 		
 	@media screen and ( max-width: 768px)
@@ -57,7 +59,7 @@
 			height: 50vh
 		.box-text
 			.title-line
-				font-size: 30px
+				font-size: (30px)
 				padding-bottom: 12px
 			.title-small
 				font-size: r(35px)
