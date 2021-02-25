@@ -1,0 +1,35 @@
+.tong-quan-1.duan-ct
+   .wrap-left
+        .wrap-top
+            margin-bottom: 0
+.duan-ct-2
+    .wrap-box
+        display: flex
+        .item
+            width: 25%
+            position: relative
+            .img
+                +img-ratio(305/305)
+            .inner
+                position: absolute
+                bottom: 30px
+                left: 20px
+                .icon
+                    margin-bottom: 10px
+            &::before
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                background-color: #ffffff
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 100%)
+            &:first-child
+                &::before,
+                .img
+                    border-radius: 20px 0 0 20px
+            &:last-child
+                &::before,
+                .img
+                    border-radius: 0 20px 20px 0
+
+
