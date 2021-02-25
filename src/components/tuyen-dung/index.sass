@@ -5,6 +5,9 @@
 	
 	.section-title
 		margin-bottom: 0
+		@media screen and ( max-width: 568px )
+			font-size: 28px
+			
 	.wrap-post
 		padding: 30px 0
 		@media screen and ( max-width: 768px )
@@ -75,7 +78,10 @@
 				left: 0
 				top: 0
 				padding: 30px 20px 30px 30px
-				transform: translateY(70%)
+				transform: translateY(80%)
+				@media screen and ( max-width: 1024px )
+					transform: translateY(70%)	
+					
 				@media screen and ( max-width: 768px)
 					transform: translateY(85%)
 				@media screen and ( max-width: 568px )
