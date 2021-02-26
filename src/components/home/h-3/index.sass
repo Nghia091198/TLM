@@ -2,10 +2,6 @@
 	background-color: #fff
 	position: relative
 	overflow: hidden
-	// @media screen and ( min-width: 1280px )
-	// 	.container
-	// 		max-width: 1440px;
-	// 		width: 100%;
 	.box-wrap
 		height: 100%
 		display: flex
@@ -22,6 +18,8 @@
 			.section-title
 				font-size: r(18px)
 				line-height: 1
+				&::before
+					top: auto
 			.desc
 				font-size: r(36px)
 				font-weight: 700
@@ -31,10 +29,14 @@
 			.content
 				text-align: justify
 				padding-right: r(100px)
+				@media screen and ( max-width: 767.9px )
+					padding-right: 0
 		.wrap-right
 			display: flex
 			@media screen and ( max-width: 1279.9px )
 				justify-content: center
+			@media screen and ( max-width: 767.9px )
+				flex-wrap: wrap
 			.item
 				flex: 0 0 260px
 				border-radius: 18px
@@ -45,7 +47,10 @@
 				transform: translateY(0px)
 				transition: .3s all
 				@media screen and ( max-width: 1023.9px )
-					flex: 0 0 (100% / 3)
+					flex: 0 0 calc((100% / 3)-15px)
+				@media screen and ( max-width: 767.9px )
+					flex: 0 0 calc((100% / 2)-15px)
+					margin-bottom: r(15px)
 				>.img
 					+img-ratio(400/260)
 				&:last-child

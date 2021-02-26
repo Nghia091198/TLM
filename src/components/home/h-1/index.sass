@@ -35,6 +35,11 @@
         bottom: 40%
         font-weight: 400
         text-transform: uppercase
+        @media screen and ( max-width: 1023.9px)
+            font-size: r(28px)
+        @media screen and ( max-width: 767.9px )
+            transform: translate3d(-50%, -20% , 0)
+            bottom: 20%
     .swiper-slide-active
         .box-text
             font-weight: 400!important
@@ -42,6 +47,10 @@
             bottom: 20%
             transform: translateY(-20%) translateX(-50%)!important
             opacity: 1
+            @media screen and ( max-width: 1199.9px )
+                bottom: 25%
+            @media screen and ( max-width: 1199.9px )
+                bottom: 10%
     .wrap-scroll
         position: absolute
         left: 50%
@@ -51,11 +60,12 @@
         height: 40px
         border-radius: 12px
         border: 1px solid #ffffff
-        position: relative
         display: flex
         flex-direction: column
         align-items: center
         justify-content: center
+        @media screen and ( max-width: 1023.9px )
+            display: none
         &:hover
             cursor: pointer
         span

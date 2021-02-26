@@ -2,8 +2,14 @@
     padding: 0
     background-size: 105% 105%!important
     overflow: hidden
-    .container
-        max-width: 600px
+    @media screen and ( max-width: 1023.9px )
+        display: block !important
+        .container
+            padding-top: r(40px)
+            padding-bottom: r(40px)
+    @media screen and ( min-width: 1200px )
+        .container
+            max-width: 600px
     .wrap-box
         display: flex
         justify-content: center
@@ -11,9 +17,10 @@
         .wrap-left
             height: 100%
             display: flex
-            justify-content: center
             flex-direction: column
-            max-width: 600px
+            justify-content: center
+            @media screen and ( min-width: 1200px )
+                max-width: 600px
             .section-title
                 margin-top: r(30px)
     .wrap-right

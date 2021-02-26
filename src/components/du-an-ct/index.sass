@@ -1,13 +1,32 @@
 .tong-quan-1.duan-ct
-   .wrap-left
+    .wrap-left
         .wrap-top
             margin-bottom: 0
+    .btn-primary
+        a
+            padding-left: r(40px)
+        color: $white
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
+        background-image: linear-gradient(to top, #17a654 0%, #134d90 100%)
+        &::before  
+            filter: brightness(0) invert(1)
+        &:hover
+            transform: all .3s ease-in-out
+            transform: translateY(-5px)
 .duan-ct-2
+    .title-center
+        margin-bottom: r(40px)
     .wrap-box
         display: flex
+        @media screen and ( max-width: 767.9px )
+            flex-wrap: wrap
         .item
             width: 25%
             position: relative
+            @media screen and ( max-width: 767.9px )
+                width: 50%
+            @media screen and ( max-width: 479.9px )
+                width: 100%
             .img
                 +img-ratio(305/305)
             .inner
@@ -27,9 +46,13 @@
                 &::before,
                 .img
                     border-radius: 20px 0 0 20px
+                    @media screen and ( max-width: 767.9px )
+                        border-radius: 0
             &:last-child
                 &::before,
                 .img
                     border-radius: 0 20px 20px 0
+                    @media screen and ( max-width: 767.9px )
+                        border-radius: 0
 
 
