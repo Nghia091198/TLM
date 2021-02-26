@@ -1,4 +1,4 @@
-section.thu-vien-video
+section.thu-vien-video.section
 	.container
 		.primary-nav
 			ul
@@ -13,20 +13,18 @@ section.thu-vien-video
 				.section-title.main.backInDown.text-center Thư viện Video
 			.sub-tab 
 				ul.type-none
-					li
+					li.active
 						a(href="#") Hình dự án
 					li
 						a(href="#") Hình TLM Corp
-					
-					
-						
+	
+										
 		.thuvien-list
 			.row
 				-for(x=0;x<3;x++)
 					.col-lg-4.box
 						
 						.box-wrap
-							.bg-dark
 							a(data-fancybox='gallery', href='https://www.youtube.com/watch?v=_sI_Ps7JSEk').img
 								img(src="./img/thu-vien/tv2.png", alt="")
 							.info 
@@ -43,6 +41,14 @@ section.thu-vien-video
 							.info 
 								a(href="#") Album 1
 
+			.modulepager
+				ul.pagination
+					li.active 
+						a(href="") 1 
+					li 
+						a(href="") 2
+					li
+						a(href="") 3
 
 
 

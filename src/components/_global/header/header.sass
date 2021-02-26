@@ -128,6 +128,14 @@ header
 		.img
 			display: flex
 			width: 145px
+	>ul
+		li
+			&:hover
+				.title
+					&::before
+						width: 100%
+
+
 	ul
 		list-style: none
 		padding: 0
@@ -143,7 +151,7 @@ header
 			display: inline-flex
 			align-items: center
 			cursor: pointer
-			>a
+			> .title
 				position: relative
 			&.active
 				.title
@@ -158,9 +166,9 @@ header
 							width: 100%
 							background: $bg-gradient
 				a, em
-					+text-gradient
+					+text-gradient-menu
 					text-decoration: underline		
-			>a
+			> .title
 				&::before
 					content: ""
 					position: absolute
@@ -173,7 +181,7 @@ header
 			&:hover
 				.title
 					a
-						+text-gradient
+						+text-gradient-menu
 						transition: .3s all ease-in-out
 				&::before
 					width: 100%
@@ -199,14 +207,14 @@ header
 						+dc
 						min-width: 190px
 						padding: r(20px)
-						font-size: 14px;
-						font-weight: 700;
-						text-transform: uppercase;
+						font-size: 14px
+						font-weight: 700
+						text-transform: uppercase
 						color: $color-33
-						border: 1px solid $color-eb;
+						border: 1px solid $color-eb
 						&:hover
 							*
-								+text-gradient
+								+text-gradient-menu
 	
 
 .toggle-menu

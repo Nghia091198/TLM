@@ -299,8 +299,8 @@ function listBanerSlide() {
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
-            nextEl: "#ka-swiper1 .button-next",
-            prevEl: "#ka-swiper1 .button-prev",
+            nextEl: ".home-4 .s4-right .button-next",
+            prevEl: ".home-4 .s4-right .button-prev",
         },
     });
     var newsSwiper = new Swiper(".home-5 .swiper-news .swiper-container", {

@@ -1,4 +1,4 @@
-section.tuyen-dung-1
+section.tuyen-dung-1(setBackground="./img/tuyen-dung/tdbn.png")
 	.container
 		.primary-nav
 			ul
@@ -9,60 +9,28 @@ section.tuyen-dung-1
 				li
 					a(href="") Giới thiệu tổng quan
 		.wrap-post
-			.row
+			.row.no-gutters
 				.col-lg-6.col-sm-12
 					.box-wrap.bg-gradient3
 						h2.section-title.white Phát triển cùng TLM
 						.desc
 							p Không chỉ thu hút, giữ chân nhân tài bằng chế độ lương thưởng, phúc lợi cạnh tranh; Tập đoàn bất động sản TLM còn kịp thời ghi nhận, tưởng thưởng xứng đáng mỗi đóng góp của cá nhân; đồng thời, xây dựng lộ trình thăng tiến rõ ràng và mang đến cơ hội khẳng định giá trị bản thân.
-		
-				.col-lg-6.col-sm-12
-					.wrapper-img
-						.box-dark
-						.img
-							a(href="")
-								img(data-src="./img/homebanner.png" alt="" class="lazyload")
-						.text-desc
-							
+				-for(i=0; i<3; i++)
+					.col-lg-6.col-sm-12
+						.wrapper-img
 							.img
-								img(src="./img/tuyen-dung/icon-money.png", alt="")
-							a(href="#").title HỆ THỐNG LƯƠNG & THƯỞNG
-							.desc
-								| Tập đoàn TLM thường xuyên tổ chức các khóa đào tạo, training cho cán bộ, nhân viên.
-								br
-								| Được cử đi tham dự các chương trình đào tạo chất lượng để phát triển chuyên môn, nâng cao năng lực quản lý.
-				.col-lg-6.col-sm-12
-					.wrapper-img
-						.box-dark
-						.img
-							a(href="")
-								img(data-src="./img/thu-vien/tv2.png" alt="" class="lazyload")
-						.text-desc
-							
-							.img
-								img(src="./img/tuyen-dung/icon-money.png", alt="")
-							a(href="#").title HỆ THỐNG LƯƠNG & THƯỞNG
-							.desc
-								| Tập đoàn TLM thường xuyên tổ chức các khóa đào tạo, training cho cán bộ, nhân viên.
-								br
-								| Được cử đi tham dự các chương trình đào tạo chất lượng để phát triển chuyên môn, nâng cao năng lực quản lý.
-				.col-lg-6.col-sm-12
-					.wrapper-img
-						.box-dark
-						.img
-							a(href="")
-								img(data-src="./img/homebanner.png" alt="" class="lazyload")
-						.text-desc
-							
-							.img
-								img(src="./img/tuyen-dung/icon-money.png", alt="")
-							a(href="#").title HỆ THỐNG LƯƠNG & THƯỞNG
-							.desc
-								| Tập đoàn TLM thường xuyên tổ chức các khóa đào tạo, training cho cán bộ, nhân viên.
-								br
-								| Được cử đi tham dự các chương trình đào tạo chất lượng để phát triển chuyên môn, nâng cao năng lực quản lý.
+								a(href="")
+									img(data-src="./img/homebanner.png" alt="" class="lazyload")
+							.text-desc
+								.img
+									img(src="./img/tuyen-dung/icon-money.png", alt="")
+								a(href="#").title HỆ THỐNG LƯƠNG & THƯỞNG
+								.desc
+									| Tập đoàn TLM thường xuyên tổ chức các khóa đào tạo, training cho cán bộ, nhân viên.
+									br
+									| Được cử đi tham dự các chương trình đào tạo chất lượng để phát triển chuyên môn, nâng cao năng lực quản lý.
 				
-section.tuyeng-dung-2
+section.tuyeng-dung-2(setBackground="./img/tuyen-dung/tdbn2.png")
 	.container
 		.title-center
 			.section-title.main.backInDown.text-center Cơ hội nghề nghiệp
@@ -73,15 +41,18 @@ section.tuyeng-dung-2
 						.box-content
 							a(href="#").title Cơ hội nghề nghiệp
 							ul.info
-								li.address
-									em.material-icons fmd_good
-									p Tp. Hồ Chí Minh
-								li.time
-									em.material-icons event_available
-									p 10.01.2021
-								li.number
-									em.material-icons attach_money
-									p 8 - 10 triệu VNĐ
+								li
+									.item
+										em.material-icons fmd_good
+										p Tp. Hồ Chí Minh
+								li
+									.item
+										em.material-icons event_available
+										p 10.01.2021
+								li
+									.item.green
+										em.material-icons attach_money
+										p 8 - 10 triệu VNĐ
 								
 							.view-more
 								a(href="#") Xem thêm

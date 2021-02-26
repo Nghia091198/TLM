@@ -31,6 +31,16 @@ section.home-4
 		display: flex
 		justify-content: center
 		margin-left: auto
+		position: relative
+		.wrap-button
+			position: absolute !important
+			@media screen and ( max-width: 1519.9px )
+				bottom: -100%
+				top: auto
+			.button-next
+				right: 250px
+				z-index: 9
+			
 		#ka-swiper1
 			position: relative
 		.wrapper
@@ -64,8 +74,8 @@ section.home-4
 						flex: 10 1 0
 					@media screen and ( max-width: 767.9px )
 						flex: 3.5
-					// @media screen and ( max-width: 767.9px )
-					// 	flex: 5.5
+					&::before
+						display: none
 					.wrap-inner
 						padding: r(60px)
 						@media screen and ( max-width: 1023.9px )

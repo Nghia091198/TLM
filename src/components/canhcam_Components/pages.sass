@@ -10,31 +10,32 @@
 			margin-top: 30px
 		li
 			margin: 10px
-			color: $main
 			display: flex
 			justify-content: center
 			align-items: center
+			
 			&:last-child
 				margin-right: 0
 			a, span
 				width: 35px
 				height: 35px
 				font-size: 16px
-				color: #666666
+				border: 1px solid $main
+				color: $main
 				display: flex
 				justify-content: center
 				align-items: center
-				background: #e9f2fb
+				border-radius: 100%
+				background: $white
 				transition: .2s ease-in-out all
-				// border-radius: 5px
 				overflow: hidden
 				font-size: r(18px)
 
 			&.active, &:hover
 				a, span
 					color: #ffffff
-					background: $main
-					// border: 1px solid $main
+					background: $main-2
+					border: 1px solid $main-2
 			@media(min-width: 1024px)
 
 				a, span
