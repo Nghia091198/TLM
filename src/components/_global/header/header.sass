@@ -162,6 +162,7 @@ header
 							position: absolute
 							bottom: 1px
 							height: 2px
+							border-radius: 1px
 							left: 0
 							width: 100%
 							background: $bg-gradient
@@ -175,6 +176,7 @@ header
 					bottom: 1px
 					height: 2px
 					left: 0
+					border-radius: 1px
 					width: 0
 					background: $bg-gradient
 					transition: .3s all
@@ -203,9 +205,11 @@ header
 					left: 50%
 					transform: translateX(-50%)
 					transition: .3s all
+					width: max-content
 					.dropdown-item
 						+dc
 						min-width: 190px
+						width: 100%
 						padding: r(20px)
 						font-size: 14px
 						font-weight: 700

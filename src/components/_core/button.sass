@@ -90,9 +90,11 @@
 	.button-prev
 		background: url("../img/icon-2.png")
 		left: -75px
+		transition: .3s all ease-in-out
 		filter: grayscale(1)
 		&:hover
 			filter: grayscale(0)
+			transition: .3s all ease-in-out
 		@media screen and ( max-width: 1519.9px )
 			margin-right: auto
 			transform: translateX(-80px)
@@ -100,11 +102,13 @@
 		background: url("../img/icon-1.png")
 		right: -75px
 		filter: grayscale(1)
+		transition: .3s all ease-in-out
 		@media screen and ( max-width: 1519.9px )
 			margin-left: auto
 			transform: translateX(80px)
 		&:hover
 			filter: grayscale(0)
+			transition: .3s all ease-in-out
 		// &.gray
 		// 	filter: greyscale(100%)
 	&.white

@@ -62,10 +62,14 @@ function nextItem() {
     $("header .search-wrapper").removeClass("active");
     if ($currentSlide.is(":first-child")) {
         $("#to-top").removeClass("active");
+        $("#mail").removeClass("active");
+        $("#phone").removeClass("active");
         $("#facebook").removeClass("active");
     }
     if (currentSlideNumber == 1 && $(".full-page").length >= 1) {
         $("#to-top").addClass("active");
+        $("#mail").addClass("active");
+        $("#phone").addClass("active");
         $("#facebook").addClass("active");
     }
     $("#nav-pagination ul li").removeClass("active");
@@ -81,11 +85,15 @@ function previousItem() {
     $currentSlide.addClass("current-page");
     if ($(".full-page").length >= 1) {
         $("#to-top").addClass("active");
+        $("#mail").addClass("active");
+        $("#phone").addClass("active");
         $("#facebook").addClass("active");
     }
     $("#fake-header-open").removeClass("last");
     if ($currentSlide.is(":first-child") && $(".full-page").length >= 1) {
         $("#to-top").removeClass("active");
+        $("#mail").removeClass("active");
+        $("#phone").removeClass("active");
         $("#facebook").removeClass("active");
         $("header").removeClass("active");
         $("#fake-header-open").removeClass("active");
@@ -137,9 +145,13 @@ function scrollToTop() {
             $(".full-page").length == 0
         ) {
             $("#to-top").addClass("active");
+            $("#mail").addClass("active");
+            $("#phone").addClass("active");
             $("#facebook").addClass("active");
         } else {
             $("#to-top").removeClass("active");
+            $("#mail").removeClass("active");
+            $("#phone").removeClass("active");
             $("#facebook").removeClass("active");
         }
     });
@@ -158,6 +170,8 @@ function scrollToTop() {
                 scrollTop: 0,
             });
             $("#back-to-top").removeClass("active");
+            $("#mail").removeClass("active");
+            $("#phone").removeClass("active");
             $("#facebook").removeClass("active");
         });
     }
@@ -246,7 +260,7 @@ function toggleSearchWrapper() {
 function fixItem() {
     $(".primary-nav").sticky({
         zIndex: 9,
-        topSpacing: $("header").outerHeight(),
+        topSpacing: $("header").outerHeight() + 5 ,
     });
 }
 
@@ -356,6 +370,15 @@ function listBanerSlide() {
         navigation: {
             nextEl: ".swiper-tong-quan .button-next",
             prevEl: ".swiper-tong-quan .button-prev",
+        },
+    });
+    var nangLuc = new Swiper(".swiper-nang-luc .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-nang-luc .button-next",
+            prevEl: ".swiper-nang-luc .button-prev",
         },
     });
 }

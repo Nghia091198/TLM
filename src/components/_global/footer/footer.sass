@@ -8,4 +8,65 @@ footer
 		.footer-menu
 			margin-bottom: 0
 
+#to-top, 
+#mail,
+#phone
+	width: 60px
+	height: 60px
+	position: relative
+	position: fixed
+	right: 30px
+	border-radius: 100%
+	text-align: center
+	cursor: pointer
+	transition: .3s all ease-in-out
+	text-transform: uppercase
+	z-index: 999
+	opacity: 0
+	visibility: hidden
+	bottom: 15%
+	&.active
+		opacity: 1
+		visibility: visible
+#to-top
+	background-image: linear-gradient(to top, #17a654 0%, #134d90 100%)
+	bottom: 180px
+	&:hover
+		transform: translateY(-5px)
+	*
+		display: block
+		color: $white
+	em
+		font-size: 45px
+		height: 32px
+		pointer-events: none
+		margin-top: -5px
 
+#mail,
+#phone
+	background: $white
+	&::before	
+		+icon("\eefb")
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		color: $main-2
+		font-size: 36px
+		pointer-events: none
+	*
+		display: block
+#mail
+	bottom: 110px
+#phone
+	bottom: 40px
+	*
+		display: block
+	&::before
+		+icon("\EFE9")
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		color: $main-2
+		font-size: 36px
+		pointer-events: none
+	
