@@ -1,21 +1,22 @@
 section.home-5.main-section(setBackground="./img/home-5/bg-2.png")
-	.container.animation-right
-		.title-center
-			.section-title.main.backInDown.text-center Tin tức
-		.swiper-news.backInDown
-			.swiper-container 
-				.swiper-wrapper
-					-for(i=0; i<5; i++)
-						.swiper-slide 
-							.item
-								a(href="").img
-									img.lazyload(data-src="./img/home-5/1.png")
-								.box-content
-									a(href="").title.sm Đô thị sinh thái King Bay hưởng lợi từ phát triển hạ tầng
-									.desc Lợi thế hạ tầng giao thông đồng bộ, kinh tế phát triển của Nhơn Trạch (Đồng Nai) giúp King Bay thu hút nhà đầu tư.
-									.inner-date 15.09.2020
-									a(href="").seemore Xem thêm
-			.wrap-button 
-				.button-next
-				.button-prev
+	.wrap-container
+		.container.animation-right
+			.title-center
+				.section-title.main.backInDown.text-center Tin tức
+			.swiper-news.backInDown
+				.swiper-container 
+					.swiper-wrapper
+						-for(i=0; i<5; i++)
+							.swiper-slide 
+								.item
+									a(href="").img
+										img.lazyload(data-src="./img/home-5/1.png")
+									.box-content
+										a(href="").title.sm Đô thị sinh thái King Bay hưởng lợi từ phát triển hạ tầng
+										.desc Lợi thế hạ tầng giao thông đồng bộ, kinh tế phát triển của Nhơn Trạch (Đồng Nai) giúp King Bay thu hút nhà đầu tư.
+										.inner-date 15.09.2020
+										a(href="").seemore Xem thêm
+				.wrap-button 
+					.button-next
+					.button-prev
 

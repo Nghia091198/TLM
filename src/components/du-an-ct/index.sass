@@ -2,6 +2,23 @@
     .wrap-left
         .wrap-top
             margin-bottom: 0
+        table
+            tr
+                td
+                    margin-bottom: r(30px)
+                    &:first-child
+                        +dc
+                        width: 62px
+                        height: 62px
+                        border-radius: 10px
+                        background-color: $white
+                        @media screen and ( max-width: 480px )
+                            padding: 5px 10px
+                    &:last-child
+                        padding-left: r(30px)
+                        vertical-align: top
+                &:last-child
+                    margin-bottom: 0
     .btn-primary
         a
             padding-left: r(40px)

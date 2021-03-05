@@ -51,10 +51,12 @@ header
 				right: 0
 				border: unset
 				background-color: $tran
+				font-size: 0
 				&::before
 					+icon("\f0d1")
 					+text-gradient 
 					right: 0
+					font-size: r(18px)
 	.wrap-language
 		position: relative
 		cursor: pointer
@@ -77,6 +79,7 @@ header
 			padding: r(5px)
 			background-color: $main-2
 			color: $white
+			z-index: 3
 		&:hover
 			color: $main-2
 			.dropdown
@@ -110,6 +113,14 @@ header
 				img
 					width: 75px
 					height: 40px
+	.Module.Module-141, 
+	.Module.Module-141 .ModuleContent,
+	.Module.Module-142,
+	.Module.Module-142 .ModuleContent
+		display: flex
+		width: 100%
+		height: 100%
+		justify-content: space-between
 .primary-menu
 	display: flex
 	align-items: center
@@ -128,9 +139,11 @@ header
 		.img
 			display: flex
 			width: 145px
+			img
+				margin: 0 auto
 	>ul
 		li
-			&:hover
+			&::hover
 				.title
 					&::before
 						width: 100%
@@ -151,21 +164,24 @@ header
 			display: inline-flex
 			align-items: center
 			cursor: pointer
+			&::hover
+				.title
+					&::before
+						width: 100%
 			> .title
 				position: relative
 			&.active
 				.title
 					position: relative
-					a
-						&::before
-							content: ""
-							position: absolute
-							bottom: 1px
-							height: 2px
-							border-radius: 1px
-							left: 0
-							width: 100%
-							background: $bg-gradient
+					&::before
+						content: ""
+						position: absolute
+						bottom: 1px
+						height: 2px
+						border-radius: 1px
+						left: 0
+						width: 100%
+						background: $bg-gradient
 				a, em
 					+text-gradient-menu
 					text-decoration: underline		
@@ -182,11 +198,11 @@ header
 					transition: .3s all
 			&:hover
 				.title
+					&::before
+						width: 100%
 					a
 						+text-gradient-menu
 						transition: .3s all ease-in-out
-				&::before
-					width: 100%
 				.dropdown
 					// top: 100%
 					opacity: 1

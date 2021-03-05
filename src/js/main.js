@@ -292,6 +292,7 @@ function listBanerSlide() {
 
     var myswiper = new Swiper("#home-banner .swiper-container", {
         loop: false,
+        slidesPerView: 1,
         speed: 1000,
         effect: "fade",
         grabCursor: true,
@@ -317,26 +318,40 @@ function listBanerSlide() {
             prevEl: ".home-4 .s4-right .button-prev",
         },
     });
+    var home4 = new Swiper(".index-3-slide .swiper-container", {
+        slidesPerView: "auto",
+        allowTouchMove: false,
+        spaceBetween: 5,
+        speed: 500,
+        // slideActiveClass: "active",
+        navigation: {
+            nextEl: ".home-4 .index-3-slide .button-next",
+            prevEl: ".home-4 .index-3-slide .button-prev",
+        },
+        // on: {
+        //     afterInit: function () {
+        //       console.log('swiper initialized');
+        //       $(".swiper-slide-active").css({"width": "50%"})
+        //       $(".swiper-slide-duplicate-active").css({"width": "50%"})
+        //     },
+        //   },
+    });
     var newsSwiper = new Swiper(".home-5 .swiper-news .swiper-container", {
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 5,
         loop: true,
         navigation: {
-            nextEl: ".home-5 .button-next",
-            prevEl: ".home-5 .button-prev",
+            nextEl: ".home-5 .swiper-news .button-next",
+            prevEl: ".home-5 .swiper-news .button-prev",
         },
         breakpoints: {
-            575: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 20,
+                spaceBetween: 30,
             },
         },
     });
@@ -905,16 +920,85 @@ function checkBigItem() {
 function checkMargin() {
     let container = $(".container").css("marginLeft");
     let container_2 = $(".container").css("marginRight");
-    let sec_4 = $(".home-4 .wrap-slide-s4");
+    let sec_4 = $(".home-4 .s4-left");
     let sec_4_title = $(".home-4 .wrap-slide-s4 .wrap-title");
-    sec_4.css("margin-left", container);
+    sec_4.css(`flex`,`0 0 ${container}`);
     // sec_4_title.css("margin-right", container_2);
     console.log(container);
-    
+    $(window).resize(checkMargin);
+}
 
+function SlideHover() {
+    $(".index-3-slide .swiper-slide").removeClass("swiper-slide-prev");
+    $(".index-3-slide .swiper-slide").removeClass("swiper-slide-next")
+    var slide = $(".index-3-slide .swiper-slide");
+    $(".index-3-slide .swiper-slide")
+        .first()
+        .addClass("active")
+    if ($(window).width() > 1024) {
+        $(".index-3-slide .swiper-slide").on("mouseover", function() { 
+            $(this)
+                .addClass("active")
+            $(this)
+                .siblings(".index-3-slide .swiper-slide")
+                .removeClass("active")
+        });
+        $(".index-3-slide .swiper-slide-active").on("mouseout", function() {
+            $(this)
+                .removeClass("active")
+            $(this)
+                .first()
+                .addClass("active")
+        });
+        $(".index-3-slide .button-next").on("click", function() {
+            slide.removeClass("active")
+            $(".index-3-slide .swiper-slide-active").addClass("active")
+            
+            $(this).css("pointer-events", "none");
+            setTimeout(() => {
+                $(this).css("pointer-events", "auto");
+            }, 50);
+            if ($(this).css("pointer-events", "auto")) {
+                $(this).css("pointer-events", "none");
+            }
+        });
+        $(".index-3-slide .button-prev").on("click", function() {
+           
+            if (slide.hasClass("active")) {
+                slide
+                    .removeClass("active")
+                $(".swiper-slide-active").addClass("active");
+            }
+            $(this).css("pointer-events", "none");
+            setTimeout(() => {
+                $(this).css("pointer-events", "auto");
+            }, 50);
+            if ($(this).css("pointer-events", "auto")) {
+                $(this).css("pointer-events", "none");
+            }
+        });
+        
+    } else {
+    $(".index-3-slide .swiper-slide").on("touchstart", function() {
+        $(this)
+            .addClass("active")
+        $(this)
+            .siblings(".index-3-slide .swiper-slide")
+            .removeClass("active")
+    });
+    $(".index-3-slide .swiper-slide").on("touchcancel", function() {
+        $(this)
+            .removeClass("active")
+        $(this)
+            .first()
+            .addClass("active")
+    });
+
+    }
 }
 $(document).ready(function() {
     // $(".wrap-slide-s4 .swiper-slide .wrapper .item:first-child").addClass("active");
+    listBanerSlide();
     fixItem();
     // $(".home-4").attr("id", "home-4");
     checkScorll();
@@ -926,7 +1010,6 @@ $(document).ready(function() {
     }, 100);
     ajaxQHCD();
     toggleSearchWrapper();
-    listBanerSlide();
     menuFake();
     tabs();
     dropDownMenu();
@@ -946,15 +1029,15 @@ $(document).ready(function() {
     // selectQh();
     clickChangLang();
     // End
-    serviceSlide();
-    productSlide();
+    // serviceSlide();
+    // productSlide();
     projectDetailSlide();
     scorllActive();
-    setTimeout(() => {
-        let widthPa = $(".lab-main-2 .swiper-slide-active").outerWidth();
-        // alert(widthPa);
-        $(".lab-main-2 .swiper-pagination").css("width", widthPa);
-    }, 400);
+    // setTimeout(() => {
+    //     let widthPa = $(".lab-main-2 .swiper-slide-active").outerWidth();
+    //     // alert(widthPa);
+    //     $(".lab-main-2 .swiper-pagination").css("width", widthPa);
+    // }, 400);
     // openPopupCd();
     moveDetail();
     wrapTable();
@@ -964,4 +1047,5 @@ $(document).ready(function() {
     checkFooter();
     checkBigItem();
     checkMargin();
+    SlideHover();
 });
