@@ -323,7 +323,8 @@ function listBanerSlide() {
         allowTouchMove: false,
         spaceBetween: 5,
         speed: 500,
-        // slideActiveClass: "active",
+        slideToClickedSlide: 1,
+        // 116slideActiveClass: "active",
         navigation: {
             nextEl: ".home-4 .index-3-slide .button-next",
             prevEl: ".home-4 .index-3-slide .button-prev",
