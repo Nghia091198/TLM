@@ -260,35 +260,35 @@ function toggleSearchWrapper() {
 function fixItem() {
     $(".primary-nav").sticky({
         zIndex: 9,
-        topSpacing: $("header").outerHeight() + 5 ,
+        topSpacing: $("header").outerHeight() + 5,
     });
 }
 
 function listBanerSlide() {
-      //slider trong trang tin tuc chi tiet
-      var sliderpostorther = new Swiper('.wrap-post-detail .swiper-container', {
-		slidesPerView: 1,
+    //slider trong trang tin tuc chi tiet
+    var sliderpostorther = new Swiper('.wrap-post-detail .swiper-container', {
+        slidesPerView: 1,
         spaceBetween: 20,
-		loop: true,
-		navigation: {
-		  nextEl: '.wrap-post-detail .slider .button-slider .button-next',
-		  prevEl: '.wrap-post-detail .slider .button-slider .button-prev',
-		},
+        loop: true,
+        navigation: {
+            nextEl: '.wrap-post-detail .slider .button-slider .button-next',
+            prevEl: '.wrap-post-detail .slider .button-slider .button-prev',
+        },
         breakpoints: {
             575: {
                 slidesPerView: 1,
-                
+
             },
             768: {
                 slidesPerView: 2,
-                
+
             },
             1024: {
                 slidesPerView: 3,
-                
+
             },
         },
-	  });
+    });
 
     var myswiper = new Swiper("#home-banner .swiper-container", {
         loop: false,
@@ -307,7 +307,7 @@ function listBanerSlide() {
             crossFade: true,
         },
     });
-    
+
     var home4_2 = new Swiper("#ka-swiper1", {
         // paginationClickable: true,
         loop: true,
@@ -319,15 +319,20 @@ function listBanerSlide() {
         },
     });
     var home4 = new Swiper(".index-3-slide .swiper-container", {
-        slidesPerView: "auto",
-        allowTouchMove: false,
+        // slidesPerView: "auto",
+        // slidesPerView: 2,
+        // touchEventsTarget: 'wrapper',
+        freeMode: true,
+        observer: true,
+        width: 190,
+        observeParents: true,
         spaceBetween: 5,
+        autoplay: true,
         speed: 500,
-        slideToClickedSlide: 1,
         // 116slideActiveClass: "active",
         navigation: {
-            nextEl: ".home-4 .index-3-slide .button-next",
-            prevEl: ".home-4 .index-3-slide .button-prev",
+            nextEl: ".home-4 .button-next",
+            prevEl: ".home-4 .button-prev",
         },
         // on: {
         //     afterInit: function () {
@@ -905,39 +910,36 @@ function dropDownMenu() {
 }
 
 function checkFooter() {
-    if($("body").hasClass("homepage")) {
+    if ($("body").hasClass("homepage")) {
         $("footer .bg-fake .footer").appendTo($(".homepage .home-6 .bg-fake"));
     }
 }
 
-function checkBigItem() {
-    let item = $(".wrap-slide-s4 .swiper-slide .wrapper .item");
-    // let item_2 = $(".wrap-slide-s4 .swiper-slide .wrapper .item.active");
-    item.on("click", function() {
-        $(this).addClass("active").siblings().removeClass("active")
-    });
-}
+// function checkBigItem() {
+//     let item = $(".wrap-slide-s4 .swiper-slide .wrapper .item");
+//     // let item_2 = $(".wrap-slide-s4 .swiper-slide .wrapper .item.active");
+//     item.on("click", function() {
+//         $(this).addClass("active").siblings().removeClass("active")
+//     });
+// }
 
 function checkMargin() {
     let container = $(".container").css("marginLeft");
-    let container_2 = $(".container").css("marginRight");
     let sec_4 = $(".home-4 .s4-left");
-    let sec_4_title = $(".home-4 .wrap-slide-s4 .wrap-title");
-    sec_4.css(`flex`,`0 0 ${container}`);
-    // sec_4_title.css("margin-right", container_2);
+    // let sec_4_title = $(".home-4 .wrap-slide-s4 .wrap-title");
+    // sec_4.css(`flex`, `0 0 ${container}`);
+    sec_4.css("margin-left", container);
     console.log(container);
     $(window).resize(checkMargin);
 }
 
 function SlideHover() {
-    $(".index-3-slide .swiper-slide").removeClass("swiper-slide-prev");
-    $(".index-3-slide .swiper-slide").removeClass("swiper-slide-next")
     var slide = $(".index-3-slide .swiper-slide");
     $(".index-3-slide .swiper-slide")
         .first()
         .addClass("active")
     if ($(window).width() > 1024) {
-        $(".index-3-slide .swiper-slide").on("mouseover", function() { 
+        $(".index-3-slide .swiper-slide").on("mouseover", function() {
             $(this)
                 .addClass("active")
             $(this)
@@ -954,7 +956,7 @@ function SlideHover() {
         $(".index-3-slide .button-next").on("click", function() {
             slide.removeClass("active")
             $(".index-3-slide .swiper-slide-active").addClass("active")
-            
+
             $(this).css("pointer-events", "none");
             setTimeout(() => {
                 $(this).css("pointer-events", "auto");
@@ -964,7 +966,7 @@ function SlideHover() {
             }
         });
         $(".index-3-slide .button-prev").on("click", function() {
-           
+
             if (slide.hasClass("active")) {
                 slide
                     .removeClass("active")
@@ -978,22 +980,22 @@ function SlideHover() {
                 $(this).css("pointer-events", "none");
             }
         });
-        
+
     } else {
-    $(".index-3-slide .swiper-slide").on("touchstart", function() {
-        $(this)
-            .addClass("active")
-        $(this)
-            .siblings(".index-3-slide .swiper-slide")
-            .removeClass("active")
-    });
-    $(".index-3-slide .swiper-slide").on("touchcancel", function() {
-        $(this)
-            .removeClass("active")
-        $(this)
-            .first()
-            .addClass("active")
-    });
+        $(".index-3-slide .swiper-slide").on("touchstart", function() {
+            $(this)
+                .addClass("active")
+            $(this)
+                .siblings(".index-3-slide .swiper-slide")
+                .removeClass("active")
+        });
+        $(".index-3-slide .swiper-slide").on("touchcancel", function() {
+            $(this)
+                .removeClass("active")
+            $(this)
+                .first()
+                .addClass("active")
+        });
 
     }
 }
@@ -1046,7 +1048,7 @@ $(document).ready(function() {
     // New
     clickScrollTo();
     checkFooter();
-    checkBigItem();
+    // checkBigItem();
     checkMargin();
     SlideHover();
 });

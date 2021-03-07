@@ -175,7 +175,7 @@
 			// flex: 0 0 346px
 
 	.index-3-slide
-		position: relative
+		// position: relative
 		.swiper-container
 			// width: 100%
 		.box-img
@@ -185,16 +185,24 @@
 					width: 100%
 					object-fit: cover
 
-		.swiper-slide,
-			flex: 0 0 11.716276124% !important
-			transition: .5s all ease-in-out
-			overflow: hidden !important
-			
-
-			&.active
-				flex: 0 0 calc( 100% - (11.716276124%*2) ) !important
-				img
-					width: 100%
+		// 	// flex: 0 0 10.6631578947% 
+		// 	width: 10.6631578947% !important
+		// 	transition: .5s all ease-in-out
+		// 	// overflow: hidden !important
+		.swiper-slide
+			img
+				border-radius: 20px 
+		.swiper-slide-active
+			// flex: 0 0 78.6736842105% 
+			width: calc(100%-380px) !important
+		// 	img
+		// 		width: 100%
+		// .swiper-slide-next,
+		// .swiper-slide-prev
+		// 	flex: 0 0 10.6631578947% !important
+		// 	transition: .5s all ease-in-out
+		// 	width: 10.6631578947% !important
+		// 	overflow: hidden !important
 		// .swiper-slide-active
 		// 	flex: 0 0 calc( 100% - (11.716276124%*2) ) !important
 		// 	img
