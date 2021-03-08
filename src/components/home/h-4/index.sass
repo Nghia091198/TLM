@@ -4,23 +4,44 @@
 		width: 100%
 		height: 630px
 	.s4-left
-		flex: 0 0 10%
-		max-width: 10%
+		flex: 0 0 18.02%
+		max-width: 18.02%
 	.s4-right
-		flex: 0 0 90%
-		max-width: 90%
+		flex: 0 0 81.98%
+		max-width: 81.98%
 		display: flex
 		justify-content: center
 		.wrapper
 			height: 100%
-			a
-				display: block
-				height: 100%
-				img
-					width: 100%
-					height: 100%
 		.swiper-slide
 			flex: 0 0 15.6755%
-			transition: .3s all ease-in-out
+			transition: all 600ms cubic-bezier(0.825, 0.09, 0.085, 1.01)
+			.wrapper
+				a
+					display: block
+					height: 630px
+					border-radius: 25px
+					overflow: hidden
+					position: relative
+					&::before
+						content: ''
+						background-color: rgba(0, 0, 0, 0.5)
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+					img
+						transition: all 600ms cubic-bezier(0.825, 0.09, 0.085, 1.01)
+						width: 100%
+						height: 100%
+						object-fit: cover
 			&-active
 				flex: 0 0 68.649% !important
+	.button-next
+		left: 74%!important
+		right: auto
+		filter: brightness(0) invert(1)
+
+	.wrap-button
+		z-index: 2

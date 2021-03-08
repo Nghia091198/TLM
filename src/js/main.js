@@ -261,10 +261,14 @@ function listBanerSlide() {
 		},
 	});
 	var home4_2 = new Swiper("#ka-swiper1", {
-		paginationClickable: true,
+		// paginationClickable: true,
 		slidesPerView: "auto",
 		loop: true,
 		spaceBetween: 5,
+		navigation: {
+			nextEl: ".home-4 .button-next",
+			prevEl: ".home-4 .button-prev",
+		},
 		// autoHeight: true,
 		// speed: 1000,
 		// autoHeight: true,
