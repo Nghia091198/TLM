@@ -927,7 +927,7 @@ function checkMargin() {
     sec_2.css("padding-left", container);
     console.log(sec_2);
     console.log(sec_2);
-    $(window).resize(checkMargin);
+
 }
 
 function SlideHover() {
@@ -1048,4 +1048,5 @@ $(document).ready(function() {
     // checkBigItem();
     checkMargin();
     // SlideHover();
+    $(window).resize(checkMargin);
 });
