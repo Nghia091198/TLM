@@ -327,20 +327,14 @@ function listBanerSlide() {
         width: 190,
         observeParents: true,
         spaceBetween: 5,
-        autoplay: true,
+        // autoplay: true,
         speed: 500,
+        loop: true,
         // 116slideActiveClass: "active",
         navigation: {
             nextEl: ".home-4 .button-next",
             prevEl: ".home-4 .button-prev",
         },
-        // on: {
-        //     afterInit: function () {
-        //       console.log('swiper initialized');
-        //       $(".swiper-slide-active").css({"width": "50%"})
-        //       $(".swiper-slide-duplicate-active").css({"width": "50%"})
-        //     },
-        //   },
     });
     var newsSwiper = new Swiper(".home-5 .swiper-news .swiper-container", {
         slidesPerView: 1,
@@ -1053,5 +1047,5 @@ $(document).ready(function() {
     checkFooter();
     // checkBigItem();
     checkMargin();
-    SlideHover();
+    // SlideHover();
 });

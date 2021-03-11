@@ -1,5 +1,7 @@
 .home-4
 	flex-direction: column
+	@media screen and ( min-width: 1200px )
+		justify-content: center
 	.wrap-title
 		display: flex
 		justify-content: space-between
@@ -24,15 +26,50 @@
 
 	.index-3-slide
 		.box-img
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
 			.img
 				img
-					height: 500px
+					height: 550px
 					width: 100%
 					object-fit: cover
-
 		.swiper-slide
+			transition: .3s all ease-in-out
+			position: relative
 			img
-				border-radius: 20px 
+				border-radius: 25px
+			&::before
+				content: ""
+				position: absolute
+				width: 100%
+				height: 100%
+				border-radius: 25px
+				background: rgba(#252525, .5)
+			.wrap-inner
+				position: absolute
+				padding: 0
+				bottom: 30px
+				width: 100%
+				display: flex
+				justify-content: space-between
+				*
+					color: $white
+				.wrap-left
+					width: 100%
+					text-transform: uppercase
+					position: relative
+					.title,
+					.sub-title
+						position: absolute
+						transform: rotate(-90deg)
+						transform-origin: 0 0
+						transition: .3s all ease-in-out
+					.title
+						right: 0
+						font-size: r(24px)
+					.sub-title
+						right: 45px
+				.wrap-right
+					display: none
 		.swiper-slide-active
 			width: calc(100%-380px) !important
 	.wrap-button
@@ -41,7 +78,8 @@
 		.button-prev
 			position: absolute
 			z-index: 2
+			padding: r(20px)
 		.button-next
 			right: 200px
 		.button-prev
-			left: 200px
+			left: -75px
