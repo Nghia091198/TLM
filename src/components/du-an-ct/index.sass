@@ -20,6 +20,8 @@
                 &:last-child
                     margin-bottom: 0
     .btn-primary
+        width: max-content
+        padding-right: r(40px)
         a
             padding-left: r(40px)
         color: $white
@@ -42,8 +44,11 @@
             position: relative
             @media screen and ( max-width: 767.9px )
                 width: 50%
-            @media screen and ( max-width: 479.9px )
+                border: thin solid $white
+            @media screen and ( max-width: 374.9px )
                 width: 100%
+                &:not(&:last-child)
+                    border-bottom: thin solid $white
             .img
                 +img-ratio(305/305)
             .inner
@@ -71,5 +76,13 @@
                     border-radius: 0 20px 20px 0
                     @media screen and ( max-width: 767.9px )
                         border-radius: 0
+            @media screen and ( min-width: 768px )
+                &:not(:last-child)
+                    border-right: thin solid $white
+.news-detail-page
+    .wrap-post-list
+        > .container
+            max-width: 100%
+            padding: 0
 
 

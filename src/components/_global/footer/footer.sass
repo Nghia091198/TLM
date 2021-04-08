@@ -13,7 +13,6 @@ footer
 #phone
 	width: 60px
 	height: 60px
-	position: relative
 	position: fixed
 	right: 30px
 	border-radius: 100%
@@ -25,12 +24,19 @@ footer
 	opacity: 0
 	visibility: hidden
 	bottom: 15%
+	display: flex
+	align-items: center
+	a
+		height: 100%
 	&.active
 		opacity: 1
 		visibility: visible
 #to-top
+	display: block
 	background-image: linear-gradient(to top, #17a654 0%, #134d90 100%)
 	bottom: 180px
+	@media screen and ( max-width: 767.9px )
+		bottom: 20px
 	&:hover
 		transform: translateY(-5px)
 	*
@@ -57,8 +63,14 @@ footer
 		display: block
 #mail
 	bottom: 110px
+	@media screen and ( max-width: 767.9px )
+		bottom: 20px
+		right: 170px
 #phone
 	bottom: 40px
+	@media screen and ( max-width: 767.9px )
+		right: 100px
+		bottom: 20px
 	*
 		display: block
 	&::before
@@ -69,4 +81,35 @@ footer
 		color: $main-2
 		font-size: 36px
 		pointer-events: none
-	
+	 
+#mail,
+#phone
+	.inner
+		position: absolute
+		display: inline-flex
+		align-items: center
+		width: max-content
+		transition: .3s all ease-in-out
+		overflow: hidden
+		color: $main-2
+		border-radius: 25px
+		font-weight: 700
+		padding: 0 r(50px) 0 r(20px)
+		right: 20%
+		border-radius: 40px
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		background-color: $white
+	&:hover
+		.inner
+			opacity: 1
+			visibility: visible
+			transition: .3s all ease-in-out
+		// &::before
+		// 	left: 30px
+		// 	transition: .3s all ease-in-out
+		// .inner
+		// 	padding-left: 40px
+		// 	width: 100%
+		// 	transition: .3s all ease-in-out
