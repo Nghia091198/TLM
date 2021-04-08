@@ -44,7 +44,13 @@
 							text-decoration: underline
 							color: $main
 	.thuvien-list
-	
+		.row
+			&:first-child
+				.img
+					+img-ratio(220/390)
+			&:last-child
+				.img
+					+img-ratio(340/600)
 		.box-wrap
 			position: relative
 			overflow: hidden
@@ -60,18 +66,12 @@
 				height: 100%
 				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0) 100%)
 				pointer-events: none
-			.img
-				width: 100%
-				height: 100%
-				img
-					object-fit: contain
-					width: 100%
-					height: 100%
+				z-index: 2
 			.info
 				position: absolute
 				left: 50px
 				bottom: 10%
-
+				z-index: 2
 				a
 					font-size: 14px
 					color: $white
@@ -90,6 +90,7 @@
 						left: -25px
 						font-size: 18px
 						line-height: 1
+						z-index: 2
 		.modal-img
 			display: none
 			.img

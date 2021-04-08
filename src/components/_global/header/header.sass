@@ -16,25 +16,27 @@ header
 .header-top-primary
 	display: flex
 	align-items: center
+	@media screen and ( max-width: 479.9px )
+		justify-content: space-between
+		.Module.Module-138
+			display: none
 	.wrap-left
 		display: flex
 		align-items: center
 		em
 			font-size: 24px
-
-		@media screen and ( max-width: 479.9px )
-			span
-				display: none
-		em
 			font-weight: 500
 			padding-right: 10px
-			@media screen and ( max-width: 479.9px )
-				font-size: 20px
+		@media screen and ( max-width: 479.9px )
+			display: none
 		*
 			+text-gradient
 			font-weight: 700
 	.wrap-search
 		margin-left: auto
+		@media screen and ( max-width: 479.9px )
+			margin-left: 0
+			order: 1
 		.searchbox
 			position: relative
 			&::before
@@ -96,12 +98,13 @@ header
 	// box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
 	// display: flex
 	// align-items: center
-	height: 85px
+	height: 65px
 	background: $white
 	.container
 		height: 100%
 	@media screen and ( max-width: 767.9px )
 		height: 65px
+		position: relative
 	.primary-menu
 		@media screen and ( max-width: 1023.9px )
 			.logo
@@ -137,11 +140,12 @@ header
 					display: none
 	.logo
 		margin: 0 r(130px)
-		@media screen and ( max-width: 1199.9px )
+		padding: 10px 0
+		@media screen and ( max-width: 1279.9px )
 			margin: 0 r(60px)
 		.img
 			display: flex
-			width: 145px
+			width: 100px
 			img
 				margin: 0 auto
 	>ul
@@ -250,8 +254,7 @@ header
 	transition: .3s all ease-in-out
 	margin-left: auto
 	right: 30px
-	top: 50%
-	transform: translateY(-50%)
+	top: 25%
 	margin-top: 5px
 	span
 		position: absolute

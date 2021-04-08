@@ -1,10 +1,16 @@
 .home-5
 	justify-content: center
 	align-items: center
+	.mx-auto
+		margin-left: auto
+		margin-right: auto
 	.Module.Module-210
 		max-width: 100%
 	.swiper-news
 		position: relative
+		.wrap-button
+			@media screen and ( max-width: 1519.9px )
+				display: none
 		.item
 			display: flex
 			flex-direction: column
@@ -29,6 +35,9 @@
 					margin-bottom: r(20px)
 					transition: .3s all
 					height: 84px
+					@media screen and ( max-width: 767.9px )
+						height: 40px
+						font-size: 16px
 				.desc
 					+line(1)
 					font-size: r(14px)

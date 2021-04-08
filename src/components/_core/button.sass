@@ -79,6 +79,8 @@
 		width: 50px
 		height: 10px
 		transition: .3s all ease-in-out
+		@media screen and ( max-width: 1023.9px )
+			width: 30px
 		@media screen and ( max-width: 1519.9px )
 			position: static
 			margin-top: r(30px)
@@ -92,6 +94,7 @@
 		left: -75px
 		transition: .3s all ease-in-out
 		filter: grayscale(1)
+		background-size: contain
 		&:hover
 			filter: grayscale(0)
 			transition: .3s all ease-in-out
@@ -100,6 +103,7 @@
 			transform: translateX(-80px)
 	.button-next
 		background: url("../img/icon-1.png") no-repeat
+		background-size: contain
 		right: -75px
 		filter: grayscale(1)
 		transition: .3s all ease-in-out

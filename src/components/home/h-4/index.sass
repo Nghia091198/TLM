@@ -5,24 +5,23 @@
 	.wrap-title
 		display: flex
 		justify-content: space-between
+		.seemore
+			&::before
+				top: 20%
 	.seemore
 		color: $white
 		margin-right: r(80px)
 		&::before
 			background: $white
 			transform: translateY(0)
-			top: 20%
+			top: 50%
 			transition: .3s all ease-in-out
 		&:hover
 			color: $main
 			&::before
 				background: $main
-	.box
-		display: flex
-		flex-direction: row
-		.s4-right
-			text-align: right
-			margin-left: 30px
+	.s4-left
+		position: relative
 
 	.index-3-slide
 		.box-img
@@ -32,8 +31,10 @@
 					height: 550px
 					width: 100%
 					object-fit: cover
+					@media screen and ( max-width: 1519.9px )
+						height: 450px
 		.swiper-slide
-			transition: .3s all ease-in-out
+			transition: .2s all ease-in-out
 			position: relative
 			img
 				border-radius: 25px
@@ -44,17 +45,24 @@
 				height: 100%
 				border-radius: 25px
 				background: rgba(#252525, .5)
+				pointer-events: none
 			.wrap-inner
 				position: absolute
 				padding: 0
 				bottom: 30px
 				width: 100%
 				display: flex
+				left: 40%
 				justify-content: space-between
+				z-index: 3
+				@media screen and ( max-width: 768px )
+					flex-direction: column
+					height: 100%
+					bottom: 0
+					justify-content: center
 				*
 					color: $white
 				.wrap-left
-					width: 100%
 					text-transform: uppercase
 					position: relative
 					.title,
@@ -62,23 +70,75 @@
 						position: absolute
 						transform: rotate(-90deg)
 						transform-origin: 0 0
-						transition: .3s all ease-in-out
+						transition: .2s all ease-in-out
 					.title
-						right: 0
+						left: 25px
+						white-space: nowrap
 						font-size: r(24px)
 					.sub-title
-						right: 45px
+						white-space: nowrap
+						margin-bottom: 10px
 				.wrap-right
 					display: none
 		.swiper-slide-active
 			width: calc(100%-380px) !important
+			@media screen and ( max-width: 1279.9px )
+				width: calc(100%-190px) !important
+			&::before
+				background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0) 100%)
+			.wrap-inner
+				padding: 0 r(80px)
+				left: 0
+				@media screen and ( max-width: 768px )
+					padding: 0 r(60px)
+				@media screen and ( max-width: 480px )
+					padding: 0 r(30px)
+				&::before
+				.wrap-left
+					width: 100%
+					text-transform: uppercase
+					position: relative
+					@media screen and ( max-width: 767.9px )
+						margin-bottom: r(60px)
+					.title,
+					.sub-title
+						position: static
+						transform: rotate(0)
+						transform-origin: 0 0
+					.sub-title
+						right: 0
+					.title
+						position: relative
+						left: 0
+						&::before
+							content: ""
+							position: absolute
+							width: 100px
+							height: 2px
+							background-color: $white
+							bottom: -20px
+							left: 0
+							pointer-events: none
+				.wrap-right
+					display: block
+					@media screen and ( max-width: 480px )
+						.des
+							+line(4)
+						.seemore
+							white-space: nowrap
 	.wrap-button
-		display: contents
 		.button-next,
 		.button-prev
+			z-index: 3
 			position: absolute
 			z-index: 2
 			padding: r(20px)
+			filter: brightness(0) invert(1) grayscale(0)
+			opacity: 0.8
+			&:hover
+				opacity: 0.8
+			@media screen and ( max-width: 1519.9px )
+				position: static
 		.button-next
 			right: 200px
 		.button-prev
