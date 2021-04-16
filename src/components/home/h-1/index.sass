@@ -7,34 +7,35 @@
 		.swiper-container
 			@media screen and ( max-width: 768px )
 				height: 52vh
-		.img
+	.img
+		width: 100%
+		height: 100vh
+		position: relative
+		&::before
+			content: ""
+			position: absolute
 			width: 100%
-			height: 100vh
-			position: relative
-			@media screen and ( max-width: 1024px )
-				height: auto
-			@media screen and ( max-width: 992px )
-				height: 100%
-			&::before
-				content: ""
-				position: absolute
-				width: 100%
-				height: 100%
-				background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%)
-				top: 0
-				left: 0
-				z-index: 2
-				pointer-events: none 
-			img
-				transition: all 5s cubic-bezier(.22, .44, 0, 1)
-				transform: scale(1)
-				height: 100%
-				width: 100%
-				overflow: hidden
-				object-fit: cover
-		.swiper-slide
-			// max-width: 1920px!important
-			width: 100% !important
+			height: 100%
+			// background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 57%, rgba(0, 0, 0, 0) 100%)
+			background-image: linear-gradient(180deg, transparent,rgba(0, 0, 0, 0.1),rgba(0, 0, 0, .1),rgba(0, 0, 0, .2),rgba(0, 0, 0, .2),rgba(0, 0, 0, .2), rgba(0, 0, 0, .3),rgba(0, 0, 0, .3), rgba(0, 0, 0, .4), rgba(0, 0, 0, .5), rgba(0, 0, 0, .6), rgba(0, 0, 0, .7), rgba(0, 0, 0, .8), rgba(0, 0, 0, .9))
+			top: 0
+			left: 0
+			z-index: 2
+			pointer-events: none 
+		@media screen and ( max-width: 1024px )
+			height: auto
+		@media screen and ( max-width: 992px )
+			height: 100%
+		img
+			transition: all 5s cubic-bezier(.22, .44, 0, 1)
+			transform: scale(1)
+			height: 100%
+			width: 100%
+			overflow: hidden
+			object-fit: cover
+	.swiper-slide
+		// max-width: 1920px!important
+		width: 100% !important
 	.box-text
 		position: absolute
 		font-size: r(40px)
@@ -43,14 +44,14 @@
 		transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s
 		left: 50%
 		transform: translate3d(-50%, -40% , 0)
-		bottom: 40%
+		bottom: 15%
 		font-weight: 400
 		text-transform: uppercase
 		@media screen and ( max-width: 1023.9px)
 			font-size: r(28px)
 		@media screen and ( max-width: 767.9px )
 			transform: translate3d(-50%, -20% , 0)
-			bottom: 20%
+			bottom: 15%
 			width: 100%
 		&::before
 			content: ""
@@ -66,17 +67,17 @@
 			z-index: 3
 			font-weight: 400!important
 			transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s
-			bottom: 25%
+			bottom: 15%
 			transform: translateY(-25%) translateX(-50%)!important
 			opacity: 1
 			@media screen and ( max-width: 1199.9px )
-				bottom: 25%
+				bottom: 14%
 			@media screen and ( max-width: 767.9px )
-				bottom: 10%
+				bottom: 15%
 	.wrap-scroll
 		position: absolute
 		left: 50%
-		bottom: 22.5%
+		bottom: 9.5%
 		transform: translateX(-50%)
 		width: 24px
 		height: 40px

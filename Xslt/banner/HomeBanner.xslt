@@ -5,8 +5,6 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<xsl:apply-templates select="Banner"></xsl:apply-templates>
-				
-				
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>

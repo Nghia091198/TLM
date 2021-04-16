@@ -33,7 +33,7 @@
 						<xsl:value-of select="Target"></xsl:value-of>
 					</xsl:attribute>
 				<p class="title">
-					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+					
 					<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 				</p>
 				<ul class="info">
@@ -64,6 +64,7 @@
 					<xsl:text disable-output-escaping="yes">Xem Thêm</xsl:text>
 				</div>
 			</a>
+			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
