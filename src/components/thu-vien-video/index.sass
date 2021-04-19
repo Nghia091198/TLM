@@ -45,6 +45,19 @@
 						a
 							color: $main
 							text-decoration: underline
+			@media(max-width: 576px)
+				display: flex
+				justify-content: center
+				align-items: center
+				ul 
+					// width: 100% 
+					overflow-x: auto 
+					justify-content: flex-start
+					li 
+						width: max-content
+						white-space: nowrap
+						&:first-child
+							padding-left: 0
 	.thuvien-list
 		.row
 			&:first-child
