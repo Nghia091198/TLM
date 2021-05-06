@@ -58,7 +58,7 @@
 	</xsl:template>
 	<xsl:template match="News" mode="News2">
 		<div class="item">
-			<a class="img zoom-img">
+			<a class="img">
 				<xsl:attribute name="href">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
@@ -66,8 +66,8 @@
 					<xsl:text disable-output-escaping="yes">gallery-</xsl:text>
 					<xsl:value-of select="NewsId"></xsl:value-of>
 				</xsl:attribute>
-				<img class="lazyload">
-					<xsl:attribute name="data-src">
+				<img >
+					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
@@ -99,7 +99,7 @@
 	</xsl:template>
 	<xsl:template match="NewsImages">
 		<xsl:if test="position()&gt;1">
-			<a>
+			<a class="img">
 				<xsl:attribute name="href">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
@@ -110,8 +110,8 @@
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
-				<img class="lazyload">
-					<xsl:attribute name="data-src">
+				<img>
+					<xsl:attribute name="src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">

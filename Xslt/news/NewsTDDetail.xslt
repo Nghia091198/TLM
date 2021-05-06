@@ -113,7 +113,9 @@
 				<div class="heading">
 					<div class="title"><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></div>
 				</div>
-				<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
+				<div class="wrap-desc-content">
+					<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
+				</div>
 			</div>
 		</div>
 	</xsl:template>

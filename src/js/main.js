@@ -1039,4 +1039,12 @@ $(document).ready(function () {
 	moveSubNav();
 	changeInput();
 	changeMapsContact();
+	
+	
+});
+$('.duan-ct-2 .wrap-box .item .img').fancybox({
+	margin : [44,0,22,0],
+	thumbs: {
+		autoStart: true
+	}
 });

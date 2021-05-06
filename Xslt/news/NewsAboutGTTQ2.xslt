@@ -58,7 +58,7 @@
 				<div class="title-center"> 
 					<div class="section-title"><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></div>
 				</div>
-				<div class="text-center">
+				<div class="text-center img-tong-quan-3">
 					<img class="lazyload">
 						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -72,7 +72,7 @@
 		</section>
 	</xsl:template>
 	<xsl:template match="News" mode="Zone5-News">
-		<section class="section tong-quan-4" setBackground="/Data/Sites/1/media/gioi-thieu/bg-5.png">
+		<section class="section tong-quan-4" setBackground="/Data/Sites/1/media/gioi-thieu/bg-5.png" id="tong-quan-5">
 			<div class="container">
 				<div class="title-center"> 
 					<div class="section-title white"><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of></div>

@@ -1,0 +1,131 @@
+.tlm-tailieu {
+	padding-top: 0;
+	padding-bottom: 30px;
+
+	.main-table {
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+		}
+
+		td,
+		th {
+			padding: 15px;
+			line-height: 1;
+		}
+
+		thead tr {
+			background: #00a650;
+
+			th {
+				border-right: 1px solid #eaeee4;
+				border-left: 1px solid #eaeee4;
+
+				&:first-child {
+					border-left: 1px solid #eff9e2;
+				}
+
+				&:last-child {
+					border-right: 1px solid #eff9e2;
+				}
+			}
+		}
+
+		th {
+			color: #fff;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		td {
+			color: #333;
+			font-size: 16px;
+			font-weight: 400;
+		}
+
+		tbody tr {
+			-webkit-transition: all .4s ease-in-out;
+			-o-transition: .4s ease-in-out all;
+			transition: all 0.4s ease-in-out;
+
+			a {
+				-webkit-transition: all .4s ease-in-out;
+				-o-transition: .4s ease-in-out all;
+				transition: all 0.4s ease-in-out;
+			}
+
+			&:hover {
+				-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+				cursor: pointer;
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+
+				a,
+				td {
+					color: #8dc63f;
+					font-weight: 700;
+				}
+			}
+
+			td {
+				border-right: 1px solid #eaeee4;
+				border-left: 1px solid #eaeee4;
+
+				&:nth-child(2) {
+					color: #333;
+				}
+
+				&:nth-child(3) {
+					width: 240px;
+				}
+
+				&:last-child {
+					border-right: 1px solid #eff9e2;
+					width: 240px;
+				}
+
+				&:first-child {
+					border-left: 1px solid #eff9e2;
+					width: 90px;
+				}
+			}
+
+			&:nth-child(2n) {
+				background: #eff9e2;
+			}
+		}
+	}
+}
+
+@media (max-width: 1025px) {
+	.tlm-tailieu .main-table {
+		overflow-x: auto;
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			height: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #8dc63f;
+
+			&:hover {
+				background: #8dc63f;
+			}
+		}
+
+		table {
+			min-width: 960px;
+		}
+	}
+}
+
+.mdi-download:before {
+	content: "\f1da";
+}

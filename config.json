@@ -8,15 +8,14 @@
 		"src/_plugins/Tabslet.js",
 		"bower_components/lazysizes/lazysizes.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/selectize/dist/js/standalone/selectize.js",
 		"src/_plugins/Tabslet.js",
 		"src/_plugins/active-scroll.js",
 		"src/_plugins/jquery.sticky.js"
 	],
 	"css": [
 		"src/_plugins/font.css",
+		"src/_plugins/sitemap.css",
 		"src/_plugins/swiper/swiper-bundle.min.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css",
-		"bower_components/selectize/dist/css/selectize.css"
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
 	]
 }

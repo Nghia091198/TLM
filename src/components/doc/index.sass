@@ -1,0 +1,212 @@
+.search-document 
+	.main-search 
+		width: 100%
+		.form-group 
+			-webkit-box-pack: center
+			-ms-flex-pack: center
+			-webkit-box-align: center
+			-ms-flex-align: center
+			-ms-flex-wrap: wrap
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			justify-content: center
+		
+
+		input 
+			-webkit-box-flex: 0
+			-ms-flex: 0 0 85%
+			flex: 0 0 85%
+			border: 1px solid $main
+			padding: 5px 10px
+			max-width: 85%
+			height: 40px
+			margin-bottom: 0
+			background: #fff
+
+		
+
+		a 
+			-webkit-box-flex: 0
+			-ms-flex: 0 0 15%
+			-webkit-box-pack: center
+			-ms-flex-pack: center
+			-webkit-box-align: center
+			-ms-flex-align: center
+			display: -webkit-box
+			display: -ms-flexbox
+			display: flex
+			flex: 0 0 15%
+			align-items: center
+			justify-content: center
+			border: 1px solid #00a650
+			background: #00a650
+			max-width: 15%
+			height: 40px
+
+			em 
+				color: #fff
+			
+		
+	
+
+	padding-bottom: 20px
+
+
+.custom-daotao .tintuc-ds 
+	padding-bottom: 20px
+
+
+.custom-date-view 
+	-webkit-box-pack: justify
+	-ms-flex-pack: justify
+	-webkit-box-align: center
+	-ms-flex-align: center
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	.view-number 
+		color: #999
+		font-size: 14px
+	
+
+
+.tlm-tailieu .main-table table tbody tr td:nth-child(2) 
+	text-align: left
+
+.tlm-tailieu 
+	padding-top: 0
+	padding-bottom: 0
+
+	.main-table 
+		table 
+			border-collapse: collapse
+			width: 100%
+			text-align: center
+		
+
+		td,
+		th 
+			padding: 15px
+			line-height: 1
+		
+
+		thead tr 
+			background: #00a650
+
+			th 
+				border-right: 1px solid #eaeee4
+				border-left: 1px solid #eaeee4
+
+				&:first-child 
+					border-left: 1px solid #eff9e2
+				
+
+				&:last-child 
+					border-right: 1px solid #eff9e2
+				
+			
+		
+
+		th 
+			color: #fff
+			font-size: 18px
+			font-weight: 700
+			text-transform: uppercase
+		
+
+		td 
+			color: #333
+			font-size: 16px
+			font-weight: 400
+		
+
+		tbody tr 
+			-webkit-transition: all .4s ease-in-out
+			-o-transition: .4s ease-in-out all
+			transition: all 0.4s ease-in-out
+			background: #fff
+			a 
+				-webkit-transition: all .4s ease-in-out
+				-o-transition: .4s ease-in-out all
+				transition: all 0.4s ease-in-out
+			
+
+			&:hover 
+				-webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+				cursor: pointer
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1)
+
+				a,
+				td 
+					color: #8dc63f
+					font-weight: 700
+				
+			
+
+			td 
+				border-right: 1px solid #eaeee4
+				border-left: 1px solid #eaeee4
+
+				&:nth-child(2) 
+					color: #333
+				
+
+				&:nth-child(3) 
+					width: 240px
+				
+
+				&:last-child 
+					border-right: 1px solid #eff9e2
+					width: 240px
+				
+
+				&:first-child 
+					border-left: 1px solid #eff9e2
+					width: 90px
+				
+			
+
+			&:nth-child(2n) 
+				background: #eff9e2
+			
+		
+	
+
+
+@media (max-width: 1025px) 
+	.tlm-tailieu .main-table 
+		overflow-x: auto
+
+		&::-webkit-scrollbar 
+			width: 2px
+			height: 4px
+		
+
+		&::-webkit-scrollbar-track 
+			-webkit-box-shadow: none
+			box-shadow: none
+		
+
+		&::-webkit-scrollbar-thumb 
+			background: #8dc63f
+
+			&:hover 
+				background: #8dc63f
+			
+		
+
+		table 
+			min-width: 960px
+		
+	
+
+
+.mdi-download:before 
+	content: "\f1da"
+

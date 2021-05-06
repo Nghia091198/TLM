@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "3.5.1",
     "fancybox": "3.5.7",
     "plyr": "3.5.4",
     "mdi": "4.5.95",
@@ -23,6 +22,7 @@
     "linearicons": "1.0.2",
     "lazysizes": "5.1.0",
     "jssocials": "^1.5.0",
-    "selectize": "^0.12.6"
+    "selectize": "^0.12.6",
+    "jquery": "^3.6.0"
   }
 }
